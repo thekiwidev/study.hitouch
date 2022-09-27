@@ -19,9 +19,9 @@
 
 .btn {
   display: inline-block;
+  padding: 0.7rem 1.6rem;
 
-  padding: 0.6rem 1.6rem;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
 
   font-size: 1rem;
   font-weight: 600;
@@ -365,6 +365,75 @@
   // 04 students, agents,& schools
   // ----------------------------------------------------------
 
+  section.special-section {
+    margin: 8rem 0;
+
+    .contents {
+      display: flex;
+      align-items: center;
+
+      .left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        .main-image {
+          height: 440px;
+
+          position: relative;
+        }
+
+        img {
+          max-width: 350px;
+          border-radius: 0.3rem;
+        }
+
+        p.ratings {
+          position: absolute;
+          left: -35%;
+          top: 20%;
+
+          font-size: 1.2rem;
+
+          transform: rotate(90deg);
+        }
+
+        .join-now {
+          position: absolute;
+          bottom: 0;
+          right: 10%;
+        }
+      }
+      .right {
+        flex: 1;
+
+        header.special-section-header {
+          h1 {
+            font-size: 3rem;
+            width: 70%;
+
+            span {
+              color: $theme-blue;
+            }
+          }
+          p {
+            width: 60%;
+            margin: 2rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  // end of special section
+
+  // ----------------------------------------------------------
+  // 05 students, agents,& schools
+  // ----------------------------------------------------------
+
   section.platform {
     height: 100vh;
     width: 100%;
@@ -439,9 +508,9 @@
     }
   }
 
-  // end of platform section
+  // end of students, agents,& schools /platform section
 
   // ----------------------------------------------------------
-  // 05 how we help
+  // 06 how we help
   // ----------------------------------------------------------
 }

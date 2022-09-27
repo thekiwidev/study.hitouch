@@ -16,8 +16,8 @@
 
 .btn {
   display: inline-block;
-  padding: 0.6rem 1.6rem;
-  border-radius: 0.3rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.25rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -334,6 +334,80 @@
 #wrapper section.services .services-boxes .service-box .texts h3 {
   font-size: 1.8rem;
   margin-bottom: 1.4rem;
+}
+
+#wrapper section.special-section {
+  margin: 8rem 0;
+}
+
+#wrapper section.special-section .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper section.special-section .contents .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#wrapper section.special-section .contents .left .main-image {
+  height: 440px;
+  position: relative;
+}
+
+#wrapper section.special-section .contents .left img {
+  max-width: 350px;
+  border-radius: 0.3rem;
+}
+
+#wrapper section.special-section .contents .left p.ratings {
+  position: absolute;
+  left: -35%;
+  top: 20%;
+  font-size: 1.2rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#wrapper section.special-section .contents .left .join-now {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+
+#wrapper section.special-section .contents .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#wrapper section.special-section .contents .right header.special-section-header h1 {
+  font-size: 3rem;
+  width: 70%;
+}
+
+#wrapper section.special-section .contents .right header.special-section-header h1 span {
+  color: #00afef;
+}
+
+#wrapper section.special-section .contents .right header.special-section-header p {
+  width: 60%;
+  margin: 2rem 0;
 }
 
 #wrapper section.platform {
