@@ -49,14 +49,15 @@
 }
 #wrapper header#header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding: 1rem 0;
   z-index: 10;
-  transition: 0.3s all ease;
+  transition: 0.5s ease;
 }
 #wrapper header#header.active {
+  position: fixed;
   background: #fff;
 }
 #wrapper header#header.active .container na.navbar ul.navlinks a {
@@ -268,7 +269,7 @@
   margin-bottom: 1.4rem;
 }
 #wrapper section.special-section {
-  margin: 8rem 0;
+  margin: 3rem 0;
 }
 #wrapper section.special-section .contents {
   display: flex;
@@ -320,7 +321,7 @@
 #wrapper section.platform-section {
   height: 100vh;
   width: 100%;
-  margin: 8rem 0;
+  margin: 3rem 0;
 }
 #wrapper section.platform-section .container {
   display: flex;
@@ -383,7 +384,7 @@
   width: 80%;
 }
 #wrapper section.get-started {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 #wrapper section.get-started header.get-started-header h1 {
   font-size: 3rem;
