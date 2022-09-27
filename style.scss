@@ -27,13 +27,32 @@
   font-weight: 600;
 
   cursor: pointer;
-
-  color: #000;
+  transition: 0.3s all;
 
   border: none;
   outline: none;
 
-  background: #d1d1d1;
+  &.btn-primary {
+    background: $theme-blue;
+    color: #fff;
+
+    &:hover {
+      background: #2586be;
+    }
+  }
+
+  &.btn-secondary {
+    background: none;
+    border: 2px solid lighten($theme-blue, 45);
+
+    color: $theme-black;
+
+    &:hover {
+      background: $theme-blue;
+      color: #fff;
+      border-color: $theme-blue;
+    }
+  }
 }
 
 #wrapper {
@@ -102,12 +121,25 @@
         justify-content: end;
         gap: 5rem;
 
-        ul.navlinks {
-          &.active {
+        &.active {
+          ul.navlinks {
             a {
               color: #000;
             }
           }
+          .action {
+            .btn-secondary {
+              border-color: lighten($theme-blue, 45);
+              color: #000;
+
+              &:hover {
+                color: #fff;
+                border-color: $theme-blue;
+              }
+            }
+          }
+        }
+        ul.navlinks {
           a {
             color: #fff;
             font-weight: 600;
@@ -123,20 +155,17 @@
             }
           }
         }
-        button.btn-secondary {
-          background: #00afef;
-          // border: 1px solid #fff;
+        .action {
+          display: flex;
+          gap: 1rem;
 
-          font-weight: 600;
-          color: #fff;
+          .btn-secondary {
+            border-color: #a7a7a755;
+            color: #fff;
 
-          display: inline-block;
-          margin-right: 0.8rem;
-
-          transition: 0.3s all;
-
-          &:hover {
-            background: #2586be;
+            &:hover {
+              border-color: $theme-blue;
+            }
           }
         }
       }
@@ -260,27 +289,13 @@
 
           font-family: "Abyssinica SIL", san-serif;
 
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
 
           color: #fff;
         }
-      }
-      .cta-container {
-        .btn {
-          background: #fff;
-          color: #000;
-          border-color: none;
-
-          transition: all 0.3s ease;
-
-          &:hover {
-            background: #000;
-            color: #fff;
-          }
-
-          &:first-of-type {
-            margin-right: 1rem;
-          }
+        .cta-container {
+          display: flex;
+          gap: 1rem;
         }
       }
     }

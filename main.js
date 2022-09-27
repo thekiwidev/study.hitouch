@@ -21,11 +21,11 @@ new Splide(".splide", {
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.classList.add("active");
-    document.querySelector("ul.navlinks").classList.add("active");
+    document.querySelector("nav.navbar").classList.add("active");
     document.querySelector("a.logo").classList.add("active");
   } else {
     header.classList.remove("active");
-    document.querySelector("ul.navlinks").classList.remove("active");
+    document.querySelector("nav.navbar").classList.remove("active");
     document.querySelector("a.logo").classList.remove("active");
   }
 });

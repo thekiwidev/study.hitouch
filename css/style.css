@@ -21,10 +21,31 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  color: #000;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   border: none;
   outline: none;
-  background: #d1d1d1;
+}
+
+.btn.btn-primary {
+  background: #00afef;
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background: #2586be;
+}
+
+.btn.btn-secondary {
+  background: none;
+  border: 2px solid #d6f4ff;
+  color: #373435;
+}
+
+.btn.btn-secondary:hover {
+  background: #00afef;
+  color: #fff;
+  border-color: #00afef;
 }
 
 #wrapper {
@@ -98,8 +119,18 @@
   gap: 5rem;
 }
 
-#wrapper header#header .container nav.navbar ul.navlinks.active a {
+#wrapper header#header .container nav.navbar.active ul.navlinks a {
   color: #000;
+}
+
+#wrapper header#header .container nav.navbar.active .action .btn-secondary {
+  border-color: #d6f4ff;
+  color: #000;
+}
+
+#wrapper header#header .container nav.navbar.active .action .btn-secondary:hover {
+  color: #fff;
+  border-color: #00afef;
 }
 
 #wrapper header#header .container nav.navbar ul.navlinks a {
@@ -115,18 +146,20 @@
   border-color: #00afef;
 }
 
-#wrapper header#header .container nav.navbar button.btn-secondary {
-  background: #00afef;
-  font-weight: 600;
-  color: #fff;
-  display: inline-block;
-  margin-right: 0.8rem;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+#wrapper header#header .container nav.navbar .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
 }
 
-#wrapper header#header .container nav.navbar button.btn-secondary:hover {
-  background: #2586be;
+#wrapper header#header .container nav.navbar .action .btn-secondary {
+  border-color: #a7a7a755;
+  color: #fff;
+}
+
+#wrapper header#header .container nav.navbar .action .btn-secondary:hover {
+  border-color: #00afef;
 }
 
 #wrapper header#header .container div.menu {
@@ -244,25 +277,15 @@
   font-size: 3.5rem;
   padding: 1rem;
   font-family: "Abyssinica SIL", san-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #fff;
 }
 
-#wrapper section.hero-section .container .cta-container .btn {
-  background: #fff;
-  color: #000;
-  border-color: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#wrapper section.hero-section .container .cta-container .btn:hover {
-  background: #000;
-  color: #fff;
-}
-
-#wrapper section.hero-section .container .cta-container .btn:first-of-type {
-  margin-right: 1rem;
+#wrapper section.hero-section .container .heading-text .cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
 }
 
 #wrapper section.services {
