@@ -12,7 +12,7 @@ menu.addEventListener("click", () => {
 
 new Splide(".splide", {
   type: "loop",
-  // padding: "5%",
+  padding: "5%",
   gap: "3%",
   pauseOnHover: (boolean = true),
   flickPower: 600,
