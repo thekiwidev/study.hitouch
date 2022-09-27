@@ -9,7 +9,7 @@
   text-decoration: none;
   list-style: none;
 
-  font-family: "Lato", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .container {
@@ -86,8 +86,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 50%;
-        width: 150px;
-        height: 42px;
+        width: 220px;
+        height: 55px;
 
         &.active {
           background-image: url("../assets/logo-black.png");
@@ -415,8 +415,11 @@
             font-size: 3rem;
             width: 70%;
 
+            font-family: "Abyssinica SIL", sans-serif;
+
             span {
               color: $theme-blue;
+              font-family: "Abyssinica SIL", sans-serif;
             }
           }
           p {

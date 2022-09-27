@@ -6,7 +6,7 @@
   outline: none;
   text-decoration: none;
   list-style: none;
-  font-family: "Lato", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .container {
@@ -74,8 +74,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  width: 150px;
-  height: 42px;
+  width: 220px;
+  height: 55px;
 }
 
 #wrapper header#header .container a.logo.active {
@@ -399,10 +399,12 @@
 #wrapper section.special-section .contents .right header.special-section-header h1 {
   font-size: 3rem;
   width: 70%;
+  font-family: "Abyssinica SIL", sans-serif;
 }
 
 #wrapper section.special-section .contents .right header.special-section-header h1 span {
   color: #00afef;
+  font-family: "Abyssinica SIL", sans-serif;
 }
 
 #wrapper section.special-section .contents .right header.special-section-header p {
