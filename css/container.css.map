@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,kBAAY,CAAC;EACX,UAAU,EAAE,UAAU;EACtB,QAAQ,EAAE,QAAQ;CACnB",
+    "sources": [
+        "../assets/splide-4.1.2/src/css/core/object/objects/container.scss"
+    ],
+    "names": [],
+    "file": "container.css"
+}

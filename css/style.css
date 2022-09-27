@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  border: none;
+  outline: none;
+  background: #d1d1d1;
+}
+
+#wrapper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+#wrapper header#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 0;
+  z-index: 10;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+#wrapper header#header.active {
+  background: #fff;
+}
+
+#wrapper header#header.active .container na.navbar ul.navlinks a {
+  color: #fff;
+}
+
+#wrapper header#header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrapper header#header .container a.logo {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5rem;
+  background-image: url("../assets/logo-white.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  width: 150px;
+  height: 42px;
+}
+
+#wrapper header#header .container a.logo.active {
+  background-image: url("../assets/logo-black.png");
+}
+
+#wrapper header#header .container nav.navbar {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 5rem;
+}
+
+#wrapper header#header .container nav.navbar ul.navlinks.active a {
+  color: #000;
+}
+
+#wrapper header#header .container nav.navbar ul.navlinks a {
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 0.2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  border-bottom: 3px solid #00000000;
+}
+
+#wrapper header#header .container nav.navbar ul.navlinks a:hover {
+  border-color: #00afef;
+}
+
+#wrapper header#header .container nav.navbar button.btn-secondary {
+  background: #00afef;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.8rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+#wrapper header#header .container nav.navbar button.btn-secondary:hover {
+  background: #2586be;
+}
+
+#wrapper header#header .container div.menu {
+  outline: none;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#wrapper header#header .container div.menu .stroke {
+  width: 30px;
+  height: 4px;
+  border-radius: 9rem;
+  background: #fff;
+  margin-bottom: 4px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#wrapper header#header .container div.menu .text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#wrapper header#header .container div.menu.open .stroke:first-of-type {
+  -webkit-transform: rotate(45deg) translate(0px, -1px);
+          transform: rotate(45deg) translate(0px, -1px);
+}
+
+#wrapper header#header .container div.menu.open .stroke:nth-child(2) {
+  background: #fff;
+  -webkit-transform: rotate(-45deg) translate(6px, -6px);
+          transform: rotate(-45deg) translate(6px, -6px);
+}
+
+#wrapper header#header .container div.menu.open .text {
+  color: #000;
+}
+
+@media only screen and (min-width: 851px) {
+  #wrapper header#header .container div.menu {
+    display: none;
+  }
+}
+
+#wrapper section.hero-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: transparent;
+  background-image: linear-gradient(25deg, #063485 6%, #2155951f 48%);
+  opacity: 1;
+}
+
+#wrapper section.hero-section video,
+#wrapper section.hero-section img.hero-placeholder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+#wrapper section.hero-section .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#wrapper section.hero-section .container .heading-text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+#wrapper section.hero-section .container .heading-text h1 {
+  max-width: 600px;
+  font-size: 3.5rem;
+  padding: 1rem;
+  font-family: "Abyssinica SIL", san-serif;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#wrapper section.hero-section .container .cta-container .btn {
+  background: #fff;
+  color: #000;
+  border-color: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#wrapper section.hero-section .container .cta-container .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+#wrapper section.hero-section .container .cta-container .btn:first-of-type {
+  margin-right: 1rem;
+}
+
+#wrapper section.services {
+  margin: 3rem 0;
+}
+
+#wrapper section.services header.services-header h1 {
+  font-size: 3.5rem;
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: "Abyssinica SIL", sans-serif;
+}
+
+#wrapper section.services header.services-header p {
+  text-align: center;
+}
+
+#wrapper section.services .services-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  margin: 5rem auto;
+}
+
+#wrapper section.services .services-boxes .service-box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 280px;
+}
+
+#wrapper section.services .services-boxes .service-box.study-visa {
+  background: #2d69f0;
+}
+
+#wrapper section.services .services-boxes .service-box.work-visa {
+  background: #dd246e;
+}
+
+#wrapper section.services .services-boxes .service-box.tourist-visa {
+  background: #8007e6;
+}
+
+#wrapper section.services .services-boxes .service-box.business-visa {
+  background: #0cae74;
+}
+
+#wrapper section.services .services-boxes .service-box .icon {
+  padding: 2rem;
+}
+
+#wrapper section.services .services-boxes .service-box .icon img {
+  width: 64px;
+}
+
+#wrapper section.services .services-boxes .service-box .texts {
+  color: #fff;
+}
+
+#wrapper section.services .services-boxes .service-box .texts h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+
+#wrapper section.platform {
+  height: 100vh;
+  width: 100%;
+}
+
+#wrapper section.platform .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+#wrapper section.platform .container header h1 {
+  font-size: 3rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+#wrapper section.platform .container header p {
+  width: 60%;
+  text-align: center;
+  margin: 2rem auto 5rem;
+}
+
+#wrapper section.platform .container .splide {
+  width: 100%;
+}
+
+#wrapper section.platform .container .splide .splide__slide {
+  color: #000;
+}
+
+#wrapper section.platform .container .splide .splide__slide .box {
+  width: 100%;
+  height: 450px;
+  background: #00afef;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents .img {
+  height: 380px;
+  border-radius: 0.5rem;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents .texts {
+  -webkit-box-flex: 2.3;
+      -ms-flex: 2.3;
+          flex: 2.3;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents .btn {
+  background: #00afef;
+  color: #fff;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents h3 {
+  font-size: 2.5rem;
+}
+
+#wrapper section.platform .container .splide .splide__slide .contents p {
+  margin: 2rem 0;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

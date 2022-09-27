@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,cAAQ,CAAC;EACP,QAAQ,EAAE,MAAM;EAChB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "../assets/splide-4.1.2/src/css/core/object/objects/track.scss"
+    ],
+    "names": [],
+    "file": "track.css"
+}

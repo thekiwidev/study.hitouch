@@ -1,0 +1,447 @@
+// imports
+@import "./scss/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.3rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  color: #000;
+
+  border: none;
+  outline: none;
+
+  background: #d1d1d1;
+}
+
+#wrapper {
+  width: 100%;
+  margin: auto;
+
+  position: relative;
+
+  // ----------------------------------------------------------
+  // 01 header, nav & menu
+  // ----------------------------------------------------------
+
+  header#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 1rem 0;
+
+    z-index: 10;
+
+    transition: 0.3s all ease;
+
+    &.active {
+      background: #fff;
+
+      .container {
+        na.navbar {
+          ul.navlinks {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a.logo {
+        cursor: pointer;
+        flex: 1;
+        padding: 0.5rem;
+
+        background-image: url("../assets/logo-white.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        width: 150px;
+        height: 42px;
+
+        &.active {
+          background-image: url("../assets/logo-black.png");
+        }
+      }
+
+      nav.navbar {
+        flex: 9;
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 5rem;
+
+        ul.navlinks {
+          &.active {
+            a {
+              color: #000;
+            }
+          }
+          a {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.5rem 0.2rem;
+            margin: 0 1rem;
+
+            cursor: pointer;
+
+            border-bottom: 3px solid #00000000;
+
+            &:hover {
+              border-color: #00afef;
+            }
+          }
+        }
+        button.btn-secondary {
+          background: #00afef;
+          // border: 1px solid #fff;
+
+          font-weight: 600;
+          color: #fff;
+
+          display: inline-block;
+          margin-right: 0.8rem;
+
+          transition: 0.3s all;
+
+          &:hover {
+            background: #2586be;
+          }
+        }
+      }
+      div.menu {
+        outline: none;
+        background: none;
+        border: none;
+
+        position: absolute;
+        top: 20%;
+        right: 3%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 1rem 0;
+
+        transition: all 0.2s linear;
+
+        z-index: 5;
+
+        cursor: pointer;
+
+        .stroke {
+          width: 30px;
+          height: 4px;
+
+          border-radius: 9rem;
+
+          background: #fff;
+          margin-bottom: 4px;
+
+          transition: all 0.2s linear;
+        }
+
+        .text {
+          font-size: 0.7rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 1;
+
+          text-align: center;
+
+          color: #fff;
+          transition: all 0.2s linear;
+        }
+
+        &.open {
+          .stroke {
+            &:first-of-type {
+              transform: rotate(45deg) translate(0px, -1px);
+            }
+            &:nth-child(2) {
+              background: #fff;
+              transform: rotate(-45deg) translate(6px, -6px);
+            }
+          }
+          .text {
+            color: #000;
+          }
+        }
+
+        @media only screen and (min-width: 851px) {
+          display: none;
+        }
+      }
+    }
+  }
+  //   end of header section
+
+  // ----------------------------------------------------------
+  // 02 hero & banner section
+  // ----------------------------------------------------------
+
+  section.hero-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background-color: transparent;
+    background-image: linear-gradient(25deg, #063485 6%, #2155951f 48%);
+    opacity: 1;
+
+    video,
+    img.hero-placeholder {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      z-index: 1;
+
+      .heading-text {
+        position: absolute;
+        top: 40%;
+        left: 0;
+
+        width: 100%;
+        bottom: 0;
+
+        h1 {
+          max-width: 600px;
+          font-size: 3.5rem;
+          padding: 1rem;
+
+          font-family: "Abyssinica SIL", san-serif;
+
+          margin-bottom: 2rem;
+
+          color: #fff;
+        }
+      }
+      .cta-container {
+        .btn {
+          background: #fff;
+          color: #000;
+          border-color: none;
+
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+
+          &:first-of-type {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // end of hero section
+
+  // ----------------------------------------------------------
+  // 03 services & our help
+  // ----------------------------------------------------------
+
+  section.services {
+    margin: 3rem 0;
+
+    header.services-header {
+      h1 {
+        font-size: 3.5rem;
+        width: 70%;
+        margin: 2rem auto;
+        text-align: center;
+
+        font-family: "Abyssinica SIL", sans-serif;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    .services-boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      margin: 5rem auto;
+
+      .service-box {
+        padding: 2rem;
+        border-radius: 0.5rem;
+
+        width: 280px;
+
+        &.study-visa {
+          background: #2d69f0;
+        }
+
+        &.work-visa {
+          background: #dd246e;
+        }
+
+        &.tourist-visa {
+          background: #8007e6;
+        }
+
+        &.business-visa {
+          background: #0cae74;
+        }
+
+        .icon {
+          padding: 2rem;
+
+          img {
+            width: 64px;
+          }
+        }
+
+        .texts {
+          color: #fff;
+
+          h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  // end of service section
+
+  // ----------------------------------------------------------
+  // 04 students, agents,& schools
+  // ----------------------------------------------------------
+
+  section.platform {
+    height: 100vh;
+    width: 100%;
+
+    // color: #000;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      height: 100%;
+
+      header h1 {
+        font-size: 3rem;
+        margin: 3rem 0;
+        text-align: center;
+      }
+      header p {
+        width: 60%;
+        text-align: center;
+        margin: 2rem auto 5rem;
+      }
+      .splide {
+        width: 100%;
+
+        .splide__slide {
+          color: #000;
+          // margin: 0 2rem;
+
+          .box {
+            width: 100%;
+            height: 450px;
+            background: $theme-blue;
+          }
+
+          .contents {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            border-radius: 0.5rem;
+
+            padding: 2rem;
+
+            .img {
+              height: 380px;
+              border-radius: 0.5rem;
+              flex: 3;
+            }
+
+            .texts {
+              flex: 2.3;
+            }
+
+            .btn {
+              background: $theme-blue;
+              color: #fff;
+            }
+
+            h3 {
+              font-size: 2.5rem;
+            }
+            p {
+              margin: 2rem 0;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // end of platform section
+
+  // ----------------------------------------------------------
+  // 05 how we help
+  // ----------------------------------------------------------
+}
