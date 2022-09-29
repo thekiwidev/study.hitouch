@@ -433,7 +433,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #00afef;
+  background: rgba(0, 0, 0, 0.3137254902);
+  position: relative;
+  overflow: hidden;
+}
+#wrapper section.get-started .categories .category img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s;
 }
 #wrapper section.get-started .categories .category h1 {
   color: #fff;
@@ -441,9 +449,13 @@
 }
 #wrapper section.get-started .categories .category .btn {
   border: 2px solid rgba(255, 255, 255, 0.3137254902);
+  color: #fff;
 }
 #wrapper section.get-started .categories .category .btn:hover {
   background: #fff;
   color: #000;
   border-color: #fff;
+}
+#wrapper section.get-started .categories .category .btn:hover + img {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

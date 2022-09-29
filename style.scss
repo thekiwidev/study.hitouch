@@ -590,7 +590,23 @@
         justify-content: center;
         flex-direction: column;
 
-        background: $theme-blue;
+        background: #00000050;
+
+        position: relative;
+        overflow: hidden;
+
+        // &:hover {
+        //   img {
+
+        //   }
+        // }
+
+        img {
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          transition: 0.3s;
+        }
 
         h1 {
           color: #fff;
@@ -599,11 +615,16 @@
 
         .btn {
           border: 2px solid #ffffff50;
+          color: #fff;
 
           &:hover {
             background: #fff;
             color: #000;
             border-color: #fff;
+
+            & + img {
+              transform: scale(1.1);
+            }
           }
         }
       }
