@@ -459,4 +459,41 @@
 }
 #wrapper section.get-started .categories .category .btn:hover + img {
   transform: scale(1.1);
+}
+#wrapper section.milestones {
+  margin: 5rem auto;
+}
+#wrapper section.milestones header.milestones-header h1 {
+  font-family: "Abyssinica SIL", san-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+#wrapper section.milestones header.milestones-header p {
+  text-align: center;
+  margin: 1rem 0;
+}
+#wrapper section.milestones .milestones-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#wrapper section.milestones .milestones-container .milestone {
+  width: 200px;
+  max-width: 350px;
+  margin: 3rem 0;
+}
+#wrapper section.milestones .milestones-container .milestone img {
+  width: 40px;
+}
+#wrapper section.milestones .milestones-container .milestone .texts {
+  margin: 1rem 0;
+}
+#wrapper section.milestones .milestones-container .milestone .texts h2 {
+  font-family: "Abyssinica SIL", san-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#wrapper section.milestones .milestones-container .milestone .texts p {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

@@ -637,4 +637,49 @@
   // ----------------------------------------------------------
   // 07 statistics/analysis
   // ----------------------------------------------------------
+
+  section.milestones {
+    margin: 5rem auto;
+
+    header.milestones-header {
+      h1 {
+        font-family: "Abyssinica SIL", san-serif;
+        font-size: 3rem;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        margin: 1rem 0;
+      }
+    }
+    .milestones-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      .milestone {
+        width: 200px;
+        max-width: 350px;
+
+        margin: 3rem 0;
+        img {
+          width: 40px;
+        }
+
+        .texts {
+          margin: 1rem 0;
+
+          h2 {
+            font-family: "Abyssinica SIL", san-serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
 }
