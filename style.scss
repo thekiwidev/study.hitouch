@@ -37,7 +37,9 @@
     color: #fff;
 
     &:hover {
-      background: #2586be;
+      background: #fff;
+      color: #000;
+      border-color: #fff;
     }
   }
 
@@ -596,7 +598,7 @@
         }
 
         .btn {
-          color: #fff;
+          border: 2px solid #ffffff50;
 
           &:hover {
             background: #fff;
