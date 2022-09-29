@@ -53,12 +53,30 @@
   top: 0;
   left: 0;
   padding: 1rem 0;
-  z-index: 10;
-  transition: 0.5s ease;
+  z-index: 99;
+  transition: 0.3s ease-in-out;
 }
 #wrapper header#header.active {
   position: fixed;
   background: #fff;
+  -webkit-animation: fix 0.3s ease-in-out;
+          animation: fix 0.3s ease-in-out;
+}
+@-webkit-keyframes fix {
+  from {
+    top: -90px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes fix {
+  from {
+    top: -90px;
+  }
+  to {
+    top: 0;
+  }
 }
 #wrapper header#header.active .container na.navbar ul.navlinks a {
   color: #fff;
