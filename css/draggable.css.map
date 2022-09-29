@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAGG,AAAD,yBAAmB,CAAC;EAClB,qBAAqB,EAAE,IAAI;EAC3B,WAAW,EAAE,IAAI;CAClB",
-    "sources": [
-        "../assets/splide-4.1.2/src/css/core/object/modifiers/draggable.scss"
-    ],
-    "names": [],
-    "file": "draggable.css"
-}

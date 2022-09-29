@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,GAAG;CACb",
-    "sources": [
-        "../assets/splide-4.1.2/src/css/themes/sea-green/object/objects/root.scss"
-    ],
-    "names": [],
-    "file": "root.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACG,AAAD,WAAK,CAAC;EACJ,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,aAAe;EACrB,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,OAAO,EAAE,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,GAAG;CACX",
-    "sources": [
-        "../assets/splide-4.1.2/src/css/core/object/objects/sr.scss"
-    ],
-    "names": [],
-    "file": "sr.css"
-}
