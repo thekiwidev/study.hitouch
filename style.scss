@@ -964,13 +964,23 @@
 
               background: none;
 
-              width: 80%;
+              width: 85%;
               height: 52px;
+
+              border-radius: 0.3rem;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+
+              color: #fff;
             }
             button {
+              width: 15%;
               background: $theme-black;
               outline: none;
-              border: none;
+
+              border-radius: 0.3rem;
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
 
               height: 52px;
               border: 1px solid #fff;
