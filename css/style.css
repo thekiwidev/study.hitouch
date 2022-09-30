@@ -1,3 +1,18 @@
+h1 {
+  font-size: 3.5rem;
+  font-family: "Abyssinica SIL", san-serif;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-family: "Abyssinica SIL", san-serif;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: "Abyssinica SIL", san-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -228,9 +243,7 @@
 }
 #wrapper section.hero-section .container .heading-text h1 {
   max-width: 600px;
-  font-size: 3.5rem;
   padding: 1rem;
-  font-family: "Abyssinica SIL", san-serif;
   margin-bottom: 1rem;
   color: #fff;
 }
@@ -241,12 +254,13 @@
 #wrapper section.services-section {
   margin: 5rem 0;
 }
-#wrapper section.services-section header.services-header h1 {
-  font-size: 3.5rem;
+#wrapper section.services-section header.services-header {
   width: 70%;
+  margin: 0 auto;
+}
+#wrapper section.services-section header.services-header h1 {
   margin: 2rem auto;
   text-align: center;
-  font-family: "Abyssinica SIL", sans-serif;
 }
 #wrapper section.services-section header.services-header p {
   text-align: center;
@@ -286,7 +300,6 @@
   color: #fff;
 }
 #wrapper section.services-section .services-boxes .service-box .texts h3 {
-  font-size: 1.8rem;
   margin-bottom: 1.4rem;
 }
 #wrapper section.special-section {
@@ -326,11 +339,6 @@
 #wrapper section.special-section .contents .right {
   flex: 1;
 }
-#wrapper section.special-section .contents .right header.special-section-header h1 {
-  font-size: 3rem;
-  width: 70%;
-  font-family: "Abyssinica SIL", sans-serif;
-}
 #wrapper section.special-section .contents .right header.special-section-header h1 span {
   color: #00afef;
   font-family: "Abyssinica SIL", sans-serif;
@@ -350,23 +358,19 @@
   flex-direction: column;
   height: 100%;
 }
-#wrapper section.platform-section .container header h1 {
-  font-size: 3rem;
-  text-align: center;
-  font-family: "Abyssinica SIL", sans-serif;
+#wrapper section.platform-section .container header.platform-header {
   width: 70%;
   margin: 0 auto;
 }
-#wrapper section.platform-section .container header p {
-  width: 60%;
+#wrapper section.platform-section .container header.platform-header h1 {
+  text-align: center;
+}
+#wrapper section.platform-section .container header.platform-header p {
   text-align: center;
   margin: 2rem auto;
 }
 #wrapper section.platform-section .container .splide {
   width: 80%;
-}
-#wrapper section.platform-section .container .splide .splide__slide {
-  color: #000;
 }
 #wrapper section.platform-section .container .splide .splide__slide .box {
   width: 100%;
@@ -396,9 +400,6 @@
 #wrapper section.platform-section .container .splide .splide__slide .contents .texts {
   flex: 2.3;
 }
-#wrapper section.platform-section .container .splide .splide__slide .contents h3 {
-  font-size: 2.5rem;
-}
 #wrapper section.platform-section .container .splide .splide__slide .contents p {
   margin: 2rem 0;
   width: 80%;
@@ -406,13 +407,12 @@
 #wrapper section.get-started {
   margin: 5rem 0;
 }
-#wrapper section.get-started header.get-started-header h1 {
-  font-size: 3rem;
-  font-family: "Abyssinica SIL", sans-serif;
+#wrapper section.get-started header.get-started-header {
   width: 70%;
-  margin: 0 auto;
+  margin: auto;
+}
+#wrapper section.get-started header.get-started-header h1 {
   text-align: center;
-  word-spacing: -0.3rem;
 }
 #wrapper section.get-started header.get-started-header p {
   margin: 2rem auto;
@@ -447,7 +447,8 @@
   z-index: -1;
   transition: 0.3s;
 }
-#wrapper section.get-started .categories .category h1 {
+#wrapper section.get-started .categories .category h3 {
+  text-align: center;
   color: #fff;
   margin: 1rem 0;
 }
@@ -466,9 +467,11 @@
 #wrapper section.milestones {
   margin: 5rem auto;
 }
+#wrapper section.milestones header.milestones-header {
+  width: 70%;
+  margin: auto;
+}
 #wrapper section.milestones header.milestones-header h1 {
-  font-family: "Abyssinica SIL", san-serif;
-  font-size: 3rem;
   text-align: center;
 }
 #wrapper section.milestones header.milestones-header p {
@@ -487,14 +490,12 @@
   margin: 3rem 0;
 }
 #wrapper section.milestones .milestones-container .milestone img {
-  width: 40px;
+  width: 48px;
 }
 #wrapper section.milestones .milestones-container .milestone .texts {
   margin: 1rem 0;
 }
-#wrapper section.milestones .milestones-container .milestone .texts h2 {
-  font-family: "Abyssinica SIL", san-serif;
-  font-size: 2rem;
+#wrapper section.milestones .milestones-container .milestone .texts h3 {
   margin-bottom: 0.5rem;
 }
 #wrapper section.milestones .milestones-container .milestone .texts p {
@@ -508,8 +509,6 @@
   margin: auto;
 }
 #wrapper section.blog-section header.blog-section-header h1 {
-  font-family: "Abyssinica SIL", san-serif;
-  font-size: 3rem;
   text-align: center;
 }
 #wrapper section.blog-section header.blog-section-header p {
