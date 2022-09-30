@@ -835,4 +835,182 @@
       width: max-content;
     }
   }
+
+  // end of blog section
+
+  // ----------------------------------------------------------
+  // 09 footer
+  // ----------------------------------------------------------
+
+  footer.main-footer {
+    padding: 5rem;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      gap: 3rem;
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        padding-bottom: 5rem;
+        border-bottom: 1px solid $theme-black;
+
+        .company {
+          flex: 1.1;
+
+          .logo {
+            a.logo {
+              display: block;
+              cursor: pointer;
+
+              background-image: url("../assets/logo-black.png");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: 50% 50%;
+              width: 220px;
+              height: 55px;
+            }
+          }
+
+          p {
+            margin: 1.4rem 0;
+          }
+
+          .social-icons {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+
+            .social-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              padding: 0.4rem;
+              border-radius: 0.3rem;
+
+              transition: 0.3s all;
+
+              &.twitter {
+                background-color: #0cae74;
+
+                &:hover {
+                  background: #0cae75d0;
+                }
+              }
+
+              &.instagram {
+                background-color: #dd246e;
+
+                &:hover {
+                  background: #dd246ed0;
+                }
+              }
+              &.website {
+                background-color: #8007e6;
+
+                &:hover {
+                  background: #0cae74d0;
+                }
+              }
+              &.facebook {
+                background-color: #2d69f0;
+
+                &:hover {
+                  background: #2d69f0d0;
+                }
+              }
+
+              img {
+                width: 20px;
+              }
+            }
+          }
+        }
+        .immigration,
+        .quick-links,
+        .newsletter {
+          flex: 1;
+
+          h2.header {
+            font-family: "Abyssinica SIL", sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+          }
+
+          .links {
+            a {
+              color: $theme-black;
+
+              display: block;
+              padding: 0.1rem;
+              margin: 0.6rem 0;
+
+              transition: 0.3s;
+
+              &:hover {
+                color: $theme-blue;
+                transform: translateX(0.6rem);
+              }
+            }
+          }
+        }
+        .newsletter {
+          flex: 1.8;
+
+          form {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+          }
+
+          input {
+            padding: 1rem 1.5rem;
+            outline: none;
+            border: 1px solid $theme-blue;
+            font-size: 1.1rem;
+            border-right: none;
+
+            width: 80%;
+            height: 52px;
+          }
+          button {
+            background: $theme-blue;
+            outline: none;
+            border: none;
+
+            height: 52px;
+
+            padding: 1rem;
+
+            cursor: pointer;
+
+            transition: 0.3s all;
+
+            &:hover {
+              background: lighten($theme-blue, 5);
+
+              img {
+                transform: scale(1.3);
+              }
+            }
+
+            img {
+              width: 20px;
+              transition: 0.3s all;
+            }
+          }
+        }
+      }
+      .copyright {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
