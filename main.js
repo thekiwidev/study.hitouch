@@ -10,12 +10,24 @@ menu.addEventListener("click", () => {
 
 // splide slider for the Students, Agents, & Schools
 
-new Splide(".splide", {
+new Splide("#platform-slider", {
   type: "loop",
   padding: "10%",
   gap: "3%",
-  pauseOnHover: (boolean = true),
-  flickPower: 600,
+  autoplay: true,
+  pauseOnHover: true,
+  pagination: false,
+  resetProgress: false,
+}).mount();
+
+new Splide("#feature-slider", {
+  type: "loop",
+  padding: "10%",
+  gap: "3%",
+  autoplay: true,
+  pauseOnHover: true,
+  pagination: false,
+  resetProgress: false,
 }).mount();
 
 document.addEventListener("scroll", () => {

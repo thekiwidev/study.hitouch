@@ -458,7 +458,7 @@
   // end of special section
 
   // ----------------------------------------------------------
-  // 05 students, agents,& schools
+  // 05 students, agents, & schools
   // ----------------------------------------------------------
 
   section.platform-section {
@@ -487,8 +487,19 @@
         }
       }
 
-      .splide {
+      #platform-slider {
         width: 80%;
+
+        .splide__arrow {
+          img {
+            width: 32px;
+          }
+        }
+        .splide__progress__bar {
+          height: 2px;
+          background: $theme-blue;
+          border-radius: 0.5rem;
+        }
 
         .splide__slide {
           .box {
@@ -622,6 +633,17 @@
   // 07 statistics/analysis section
   // ----------------------------------------------------------
 
+  section.why-us {
+    color: $theme-black;
+    .content {
+      background: $theme-blue;
+    }
+  }
+
+  // ----------------------------------------------------------
+  // 08 statistics/analysis section
+  // ----------------------------------------------------------
+
   section.milestones {
     margin: 5rem auto;
 
@@ -669,7 +691,7 @@
   // end of statistics/analysis section
 
   // ----------------------------------------------------------
-  // 08 blog section
+  // 09 blog section
   // ----------------------------------------------------------
 
   section.blog-section {
@@ -821,7 +843,7 @@
   // end of blog section
 
   // ----------------------------------------------------------
-  // 09 footer
+  // 10 footer
   // ----------------------------------------------------------
 
   footer.main-footer {

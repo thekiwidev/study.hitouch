@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" />
+
     <!-- Fonts Imports  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +38,9 @@
   </head>
   <body>
     <div id="wrapper">
+      <!-- ----------------------------------------------------
+        01 header, nav & menu
+      ------------------------------------------------------ -->
       <header id="header" class="main-header">
         <div class="container">
           <a href="./" class="logo"></a>
@@ -57,6 +63,10 @@
           </div>
         </div>
       </header>
+
+      <!-- ----------------------------------------------------
+        02 hero & banner section
+      ------------------------------------------------------ -->
       <section class="hero-section">
         <img
           src="./assets/images/min.hero-banner.jpg"
@@ -76,6 +86,10 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        03 services & our help
+      ------------------------------------------------------ -->
       <section class="services-section">
         <div class="container">
           <header class="services-header">
@@ -130,6 +144,10 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        04 special section
+      ------------------------------------------------------ -->
       <section class="special-section">
         <div class="container">
           <div class="contents">
@@ -158,6 +176,10 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        05 students, agents, & schools
+      ------------------------------------------------------ -->
       <section class="platform-section">
         <div class="container">
           <header class="platform-header">
@@ -168,7 +190,25 @@
               minus culpa.
             </p>
           </header>
-          <div class="splide" aria-label="Splide Basic HTML Example">
+          <div
+            class="splide"
+            aria-label="Splide Basic HTML Example"
+            id="platform-slider"
+          >
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img
+                  src="./assets/icons/back.png"
+                  alt="back checkron for slider"
+                />
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img
+                  src="./assets/icons/next.png"
+                  alt="back checkron for slider"
+                />
+              </button>
+            </div>
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -228,15 +268,26 @@
                 </li>
               </ul>
             </div>
+            <div class="splide__progress">
+              <div class="splide__progress__bar"></div>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        0- services & our help
+      ------------------------------------------------------ -->
       <section class="how-we-help">
         <div class="contents how-we-help-contents">
           <div class="texts"></div>
           <div class="video"></div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        06 get started
+      ------------------------------------------------------ -->
       <section class="get-started">
         <div class="container">
           <header class="get-started-header">
@@ -263,6 +314,88 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        03 services & our help
+      ------------------------------------------------------ -->
+      <section class="why-us">
+        <div class="container">
+          <div
+            class="splide"
+            aria-label="Splide Basic HTML Example"
+            id="features-slider"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="content">
+                    <div class="icon">
+                      <img
+                        src="./assets/icons/browse.png"
+                        alt="serch for programs"
+                      />
+                    </div>
+                    <h2>Find Programs Faster</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quibusdam, repellat! Mollitia, autem iste!
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="content">
+                    <div class="icon">
+                      <img
+                        src="./assets/icons/browse.png"
+                        alt="serch for programs"
+                      />
+                    </div>
+                    <h2>Find Programs Faster</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quibusdam, repellat! Mollitia, autem iste!
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="content">
+                    <div class="icon">
+                      <img
+                        src="./assets/icons/browse.png"
+                        alt="serch for programs"
+                      />
+                    </div>
+                    <h2>Find Programs Faster</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quibusdam, repellat! Mollitia, autem iste!
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="content">
+                    <div class="icon">
+                      <img
+                        src="./assets/icons/browse.png"
+                        alt="serch for programs"
+                      />
+                    </div>
+                    <h2>Find Programs Faster</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quibusdam, repellat! Mollitia, autem iste!
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------
+        07 statistics/analysis section
+      ------------------------------------------------------ -->
       <section class="milestones">
         <div class="container">
           <header class="milestones-header">
@@ -312,6 +445,10 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        09 blog section
+      ------------------------------------------------------ -->
       <section class="blog-section">
         <div class="container">
           <header class="blog-section-header">
@@ -395,6 +532,10 @@
           </div>
         </div>
       </section>
+
+      <!-- ----------------------------------------------------
+        10 footer
+      ------------------------------------------------------ -->
       <footer class="main-footer">
         <div class="container">
           <div class="footer-top">
