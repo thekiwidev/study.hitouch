@@ -20,16 +20,6 @@ new Splide("#platform-slider", {
   resetProgress: false,
 }).mount();
 
-new Splide("#feature-slider", {
-  type: "loop",
-  padding: "10%",
-  gap: "3%",
-  autoplay: true,
-  pauseOnHover: true,
-  pagination: false,
-  resetProgress: false,
-}).mount();
-
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.classList.add("active");
