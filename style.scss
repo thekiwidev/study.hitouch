@@ -491,23 +491,20 @@
       #platform-slider {
         width: 80%;
 
-        .splide__arrow {
+        .glide__arrow {
           img {
             width: 32px;
           }
         }
-        .splide__progress__bar {
+        .glide__progress__bar {
           height: 2px;
           background: $theme-blue;
           border-radius: 0.5rem;
         }
 
-        .splide__slide {
-          .box {
-            width: 100%;
-            height: 450px;
-            background: $theme-blue;
-          }
+        .glide__slide {
+          width: 90%;
+          margin: auto;
 
           .contents {
             display: flex;

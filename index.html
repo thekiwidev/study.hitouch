@@ -23,25 +23,11 @@
       rel="stylesheet"
     />
 
-    <!-- Splide Imports  -->
-    <link
-      rel="stylesheet"
-      href="./assets/splide-4.1.2/dist/css/splide-core.min.css"
-    />
+    <!-- Glide JS -->
     <link
       rel="stylesheet"
       href="./assets/splide-4.1.2/glidejs/glide.core.css"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/splide-4.1.2/dist/css/splide.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/splide-4.1.2/dist/css/themes/splide-skyblue.min.css"
-    />
-
-    <!-- Glide JS -->
 
     <!-- main css -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -49,6 +35,7 @@
     <!-- Page Title -->
     <title>HiTouch Global | for Students</title>
   </head>
+
   <body>
     <div id="wrapper">
       <!-- ----------------------------------------------------
@@ -203,28 +190,11 @@
               minus culpa.
             </p>
           </header>
-          <div
-            class="splide"
-            aria-label="Splide Basic HTML Example"
-            id="platform-slider"
-          >
-            <div class="splide__arrows">
-              <button class="splide__arrow splide__arrow--prev">
-                <img
-                  src="./assets/icons/back.png"
-                  alt="back checkron for slider"
-                />
-              </button>
-              <button class="splide__arrow splide__arrow--next">
-                <img
-                  src="./assets/icons/next.png"
-                  alt="back checkron for slider"
-                />
-              </button>
-            </div>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
+
+          <div class="glide" id="platform-slider">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
                   <div class="contents">
                     <div class="img">
                       <img src="./assets/images/me-min.png" alt="students" />
@@ -243,7 +213,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="splide__slide">
+                <li class="glide__slide">
                   <div class="contents">
                     <div class="img">
                       <img src="./assets/images/agent.png" alt="agents" />
@@ -260,7 +230,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="splide__slide">
+                <li class="glide__slide">
                   <div class="contents">
                     <div class="img">
                       <img
@@ -280,9 +250,6 @@
                   </div>
                 </li>
               </ul>
-            </div>
-            <div class="splide__progress">
-              <div class="splide__progress__bar"></div>
             </div>
           </div>
         </div>
@@ -661,7 +628,6 @@
       </footer>
     </div>
 
-    <script src="./assets/splide-4.1.2/dist/js/splide.min.js"></script>
     <script src="./assets/splide-4.1.2/glidejs/glide.js"></script>
     <script src="./main.js"></script>
   </body>

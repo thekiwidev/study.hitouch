@@ -8,27 +8,6 @@ menu.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-// splide slider for the Students, Agents, & Schools
-
-new Splide("#platform-slider", {
-  type: "loop",
-  padding: "10%",
-  gap: "3%",
-  autoplay: true,
-  pauseOnHover: true,
-  pagination: false,
-  resetProgress: false,
-}).mount();
-
-// new Splide("#testimonies-slides", {
-//   type: "loop",
-//   perPage: 3,
-//   perMove: 1,
-//   arrows: false,
-//   pagination: false,
-//   autoplay: true,
-// }).mount();
-
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.classList.add("active");
@@ -41,6 +20,8 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// glidejs slider for the testimonials-section
+
 new Glide("#testimonies-slides", {
   type: "carousel",
   startAt: 1,
@@ -48,4 +29,13 @@ new Glide("#testimonies-slides", {
   autoplay: 5000 | true,
   gap: 5,
   hoverpause: false,
+}).mount();
+
+// glidejs slider for the Students, Agents, & Schools
+
+new Glide("#platform-slider", {
+  type: "carousel",
+  autoplay: true,
+  hoverpause: true,
+  autoplay: 10000 | true,
 }).mount();
