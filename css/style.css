@@ -672,16 +672,21 @@ h4 {
   border-radius: 0.3rem;
   position: relative;
 }
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text p {
+  z-index: 5;
+}
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text img.quote-close {
-  margin-left: 80%;
-  z-index: -1;
+  position: absolute;
+  right: 6%;
+  bottom: -25%;
+  z-index: -2;
+  opacity: 0.5;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails {
   padding: 2rem;
   padding-top: 1rem;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image {
-  margin-top: -2rem;
   margin-bottom: 1rem;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image img {
