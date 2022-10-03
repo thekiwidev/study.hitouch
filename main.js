@@ -20,6 +20,15 @@ new Splide("#platform-slider", {
   resetProgress: false,
 }).mount();
 
+new Splide("#testimonies-slides", {
+  type: "loop",
+  perPage: 3,
+  perMove: 1,
+  arrows: false,
+  pagination: false,
+  autoplay: true,
+}).mount();
+
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.classList.add("active");

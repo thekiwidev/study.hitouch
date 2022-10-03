@@ -13,6 +13,11 @@ h3 {
   font-family: "Abyssinica SIL", san-serif;
 }
 
+h4 {
+  font-size: 1.2rem;
+  font-family: "Abyssinica SIL", san-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -630,6 +635,57 @@ h3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+#wrapper section.testimonials {
+  margin: 5rem auto;
+}
+#wrapper section.testimonials header.testimonials-header {
+  width: 70%;
+  margin: 0 auto 5rem;
+}
+#wrapper section.testimonials header.testimonials-header h1 {
+  margin: 2rem auto;
+  text-align: center;
+}
+#wrapper section.testimonials .my-slider-progress {
+  background: #ccc;
+}
+#wrapper section.testimonials .my-slider-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 90%;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony {
+  max-width: 350px;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text {
+  background: #00afef;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: #fff;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image {
+  margin-top: 1rem;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image img {
+  width: 64px;
+  margin: auto;
+  display: block;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails h4 {
+  text-align: center;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails p {
+  text-align: center;
+  color: #777;
 }
 #wrapper footer.main-footer {
   padding: 5rem;

@@ -1,6 +1,7 @@
 // imports
 @import "./scss/variables";
 @import "./scss/types";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 * {
   margin: 0;
@@ -843,7 +844,80 @@
   // end of blog section
 
   // ----------------------------------------------------------
-  // 10 footer
+  // 12 footer
+  // ----------------------------------------------------------
+
+  section.testimonials {
+    margin: 5rem auto;
+
+    header.testimonials-header {
+      width: 70%;
+      margin: 0 auto 5rem;
+
+      h1 {
+        margin: 2rem auto;
+        text-align: center;
+      }
+    }
+
+    .my-slider-progress {
+      background: #ccc;
+    }
+
+    .my-slider-progress-bar {
+      background: greenyellow;
+      height: 2px;
+      transition: width 400ms ease;
+      width: 0;
+    }
+    #testimonies-slides {
+      // width: 85%;
+      // margin: auto;
+
+      .testimonies {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        width: 90%;
+
+        .testimony {
+          max-width: 350px;
+
+          .testimony-text {
+            background: $theme-blue;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            color: #fff;
+          }
+          .client-deatails {
+            .profile-image {
+              margin-top: 1rem;
+              img {
+                width: 64px;
+                margin: auto;
+                display: block;
+              }
+            }
+
+            h4 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+              color: #777;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // end of blog section
+
+  // ----------------------------------------------------------
+  // 12 footer
   // ----------------------------------------------------------
 
   footer.main-footer {
