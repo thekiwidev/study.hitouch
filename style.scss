@@ -883,13 +883,21 @@
             padding: 2rem;
             padding-bottom: 1rem;
             border-radius: 0.3rem;
+
+            position: relative;
+
+            img.quote-close {
+              margin-left: 80%;
+              z-index: -1;
+            }
           }
           .client-deatails {
             padding: 2rem;
             padding-top: 1rem;
 
             .profile-image {
-              margin-top: 1rem;
+              margin-top: -2rem;
+              margin-bottom: 1rem;
               img {
                 width: 64px;
                 margin: auto;
