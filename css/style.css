@@ -660,17 +660,21 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  width: 90%;
+  padding: 4rem;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony {
   max-width: 350px;
+  border-radius: 0.3rem;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, 0.3137254902);
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text {
-  background: #00afef;
-  padding: 1rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
   border-radius: 0.3rem;
-  color: #fff;
+}
+#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails {
+  padding: 2rem;
+  padding-top: 1rem;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image {
   margin-top: 1rem;

@@ -1,7 +1,7 @@
 // imports
 @import "./scss/variables";
 @import "./scss/types";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 * {
   margin: 0;
@@ -871,27 +871,26 @@
       width: 0;
     }
     #testimonies-slides {
-      // width: 85%;
-      // margin: auto;
-
       .testimonies {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
-
-        width: 90%;
+        padding: 4rem;
 
         .testimony {
           max-width: 350px;
+          border-radius: 0.3rem;
+          box-shadow: 8px 10px 35px #00000050;
 
           .testimony-text {
-            background: $theme-blue;
-            padding: 1rem;
+            padding: 2rem;
+            padding-bottom: 1rem;
             border-radius: 0.3rem;
-            color: #fff;
           }
           .client-deatails {
+            padding: 2rem;
+            padding-top: 1rem;
+
             .profile-image {
               margin-top: 1rem;
               img {
