@@ -47,4 +47,5 @@ new Glide("#contact-slides", {
   autoplay: true,
   hoverpause: true,
   autoplay: 5000 | true,
+  perView: 2,
 }).mount();

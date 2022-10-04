@@ -701,6 +701,58 @@ h4 {
   text-align: center;
   color: #777;
 }
+#wrapper section.contact-us .content {
+  display: flex;
+  padding: 5rem 0;
+}
+#wrapper section.contact-us .content .left-segment {
+  width: 50%;
+}
+#wrapper section.contact-us .content .left-segment header.contact-section-header {
+  margin-bottom: 5rem;
+}
+#wrapper section.contact-us .content .left-segment header.contact-section-header h1 {
+  line-height: 1;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+#wrapper section.contact-us .content .left-segment form h3 {
+  margin-bottom: 2.5rem;
+}
+#wrapper section.contact-us .content .left-segment form .input {
+  width: 100%;
+}
+#wrapper section.contact-us .content .left-segment form .input label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+#wrapper section.contact-us .content .left-segment form .input input,
+#wrapper section.contact-us .content .left-segment form .input textarea,
+#wrapper section.contact-us .content .left-segment form .input select {
+  width: 90%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  border: 1px solid #00afef;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  resize: none;
+}
+#wrapper section.contact-us .content .left-segment form .input input:focus,
+#wrapper section.contact-us .content .left-segment form .input textarea:focus,
+#wrapper section.contact-us .content .left-segment form .input select:focus {
+  background: #effbff;
+}
+#wrapper section.contact-us .content .left-segment form .input.name input {
+  text-transform: capitalize;
+}
+#wrapper section.contact-us .content .left-segment form .input.message textarea {
+  height: 150px;
+}
+#wrapper section.contact-us .content .right-segment {
+  width: 50%;
+}
 #wrapper footer.main-footer {
   padding: 5rem;
   width: 100%;

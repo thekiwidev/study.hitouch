@@ -841,7 +841,7 @@
   // end of blog section
 
   // ----------------------------------------------------------
-  // 12 footer
+  // 10 testimonials section
   // ----------------------------------------------------------
 
   section.testimonials {
@@ -927,8 +927,86 @@
     }
   }
 
-  // end of blog section
+  // end of testimonials section
 
+  // ----------------------------------------------------------
+  // 11 contact section
+  // ----------------------------------------------------------
+
+  section.contact-us {
+    .content {
+      display: flex;
+      padding: 5rem 0;
+
+      .left-segment {
+        width: 50%;
+
+        header.contact-section-header {
+          margin-bottom: 5rem;
+
+          h1 {
+            line-height: 1;
+            width: 80%;
+            margin-bottom: 1rem;
+          }
+        }
+
+        form {
+          h3 {
+            margin-bottom: 2.5rem;
+          }
+
+          .input {
+            width: 100%;
+
+            label {
+              font-size: 1.2rem;
+              display: block;
+              margin-bottom: 0.5rem;
+            }
+
+            input,
+            textarea,
+            select {
+              width: 90%;
+
+              padding: 1rem;
+              margin-bottom: 1.5rem;
+
+              outline: none;
+              border: 1px solid $theme-blue;
+              border-radius: 0.3rem;
+
+              font-size: 1rem;
+
+              resize: none;
+
+              &:focus {
+                background: lighten($theme-blue, 50);
+              }
+            }
+
+            &.name {
+              input {
+                text-transform: capitalize;
+              }
+            }
+
+            &.message {
+              textarea {
+                height: 150px;
+              }
+            }
+          }
+        }
+      }
+      .right-segment {
+        width: 50%;
+      }
+    }
+  }
+
+  // end of testimonials section
   // ----------------------------------------------------------
   // 12 footer
   // ----------------------------------------------------------
@@ -1123,4 +1201,6 @@
       }
     }
   }
+
+  // end of footer
 }
