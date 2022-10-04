@@ -1,7 +1,6 @@
 // imports
 @import "./scss/variables";
 @import "./scss/types";
-// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 * {
   margin: 0;
@@ -11,7 +10,7 @@
   text-decoration: none;
   list-style: none;
 
-  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -1124,7 +1123,6 @@
           flex: 1;
 
           h2.header {
-            font-family: "Abyssinica SIL", sans-serif;
             font-size: 1.8rem;
             margin-bottom: 2.5rem;
           }

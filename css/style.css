@@ -1,21 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 h1 {
-  font-size: 3.5rem;
-  font-family: "Abyssinica SIL", san-serif;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.8rem;
-  font-family: "Abyssinica SIL", san-serif;
+  font-size: 2.2rem;
 }
 
 h3 {
-  font-size: 1.8rem;
-  font-family: "Abyssinica SIL", san-serif;
+  font-size: 1.6rem;
 }
 
 h4 {
   font-size: 1.2rem;
-  font-family: "Abyssinica SIL", san-serif;
+}
+
+p {
+  font-size: 1rem;
 }
 
 * {
@@ -25,7 +26,7 @@ h4 {
   outline: none;
   text-decoration: none;
   list-style: none;
-  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -843,7 +844,6 @@ h4 {
 #wrapper footer.main-footer .container .footer-top .immigration h2.header,
 #wrapper footer.main-footer .container .footer-top .quick-links h2.header,
 #wrapper footer.main-footer .container .footer-top .newsletter h2.header {
-  font-family: "Abyssinica SIL", sans-serif;
   font-size: 1.8rem;
   margin-bottom: 2.5rem;
 }
