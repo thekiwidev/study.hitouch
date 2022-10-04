@@ -45,6 +45,6 @@ new Glide("#platform-slider", {
 new Glide("#contact-slides", {
   type: "carousel",
   autoplay: true,
-  hoverpause: true,
+  hoverpause: false,
   autoplay: 3000 | true,
 }).mount();

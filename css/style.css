@@ -754,6 +754,8 @@ h4 {
 #wrapper section.contact-us .content .right-segment {
   width: 50%;
   height: 100%;
+  border-left: 1px solid #e0dada;
+  padding: 5rem 2rem;
 }
 #wrapper section.contact-us .content .right-segment li.glide__slide {
   text-align: center;
