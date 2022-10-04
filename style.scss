@@ -464,7 +464,8 @@
 
   section.platform-section {
     width: 100%;
-    margin: 5rem 0;
+
+    background: lighten($theme-blue, 50);
 
     .container {
       display: flex;
@@ -472,7 +473,7 @@
       justify-content: center;
       flex-direction: column;
 
-      height: 100%;
+      padding: 5rem 0;
 
       header.platform-header {
         width: 70%;
@@ -484,7 +485,7 @@
 
         p {
           text-align: center;
-          margin: 2rem auto;
+          margin: 1rem auto;
         }
       }
 
@@ -938,6 +939,8 @@
       display: flex;
       padding: 5rem 0;
 
+      background: #f7f7f7;
+
       .left-segment {
         width: 50%;
 
@@ -1002,6 +1005,12 @@
       }
       .right-segment {
         width: 50%;
+        height: 100%;
+
+        background: #f9f9f9;
+
+        // display: grid;
+        // place-content: center;
       }
     }
   }
