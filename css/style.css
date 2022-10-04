@@ -69,7 +69,7 @@ h4 {
   margin: auto;
   position: relative;
 }
-#wrapper header#header {
+#wrapper header.main-header {
   width: 100%;
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@ h4 {
   z-index: 99;
   transition: 0.3s ease-in-out;
 }
-#wrapper header#header.active {
+#wrapper header.main-header.active {
   position: fixed;
   background: #fff;
   -webkit-animation: fix 0.3s ease-in-out;
@@ -100,15 +100,15 @@ h4 {
     top: 0;
   }
 }
-#wrapper header#header.active .container na.navbar ul.navlinks a {
+#wrapper header.main-header.active .container na.navbar ul.navlinks a {
   color: #fff;
 }
-#wrapper header#header .container {
+#wrapper header.main-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#wrapper header#header .container a.logo {
+#wrapper header.main-header .container a.logo {
   cursor: pointer;
   flex: 1;
   padding: 0.5rem;
@@ -119,28 +119,28 @@ h4 {
   width: 220px;
   height: 55px;
 }
-#wrapper header#header .container a.logo.active {
+#wrapper header.main-header .container a.logo.active {
   background-image: url("../assets/logo-black.png");
 }
-#wrapper header#header .container nav.navbar {
+#wrapper header.main-header .container nav.navbar {
   flex: 9;
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 5rem;
 }
-#wrapper header#header .container nav.navbar.active ul.navlinks a {
+#wrapper header.main-header .container nav.navbar.active ul.navlinks a {
   color: #000;
 }
-#wrapper header#header .container nav.navbar.active .action .btn-secondary {
+#wrapper header.main-header .container nav.navbar.active .action .btn-secondary {
   border-color: #d6f4ff;
   color: #000;
 }
-#wrapper header#header .container nav.navbar.active .action .btn-secondary:hover {
+#wrapper header.main-header .container nav.navbar.active .action .btn-secondary:hover {
   color: #fff;
   border-color: #00afef;
 }
-#wrapper header#header .container nav.navbar ul.navlinks a {
+#wrapper header.main-header .container nav.navbar ul.navlinks a {
   color: #fff;
   font-weight: 600;
   padding: 0.5rem 0.2rem;
@@ -148,21 +148,21 @@ h4 {
   cursor: pointer;
   border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
-#wrapper header#header .container nav.navbar ul.navlinks a:hover {
+#wrapper header.main-header .container nav.navbar ul.navlinks a:hover {
   border-color: #00afef;
 }
-#wrapper header#header .container nav.navbar .action {
+#wrapper header.main-header .container nav.navbar .action {
   display: flex;
   gap: 1rem;
 }
-#wrapper header#header .container nav.navbar .action .btn-secondary {
+#wrapper header.main-header .container nav.navbar .action .btn-secondary {
   border-color: rgba(167, 167, 167, 0.3333333333);
   color: #fff;
 }
-#wrapper header#header .container nav.navbar .action .btn-secondary:hover {
+#wrapper header.main-header .container nav.navbar .action .btn-secondary:hover {
   border-color: #00afef;
 }
-#wrapper header#header .container div.menu {
+#wrapper header.main-header .container div.menu {
   outline: none;
   background: none;
   border: none;
@@ -177,7 +177,7 @@ h4 {
   z-index: 5;
   cursor: pointer;
 }
-#wrapper header#header .container div.menu .stroke {
+#wrapper header.main-header .container div.menu .stroke {
   width: 30px;
   height: 4px;
   border-radius: 9rem;
@@ -185,7 +185,7 @@ h4 {
   margin-bottom: 4px;
   transition: all 0.2s linear;
 }
-#wrapper header#header .container div.menu .text {
+#wrapper header.main-header .container div.menu .text {
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -194,18 +194,18 @@ h4 {
   color: #fff;
   transition: all 0.2s linear;
 }
-#wrapper header#header .container div.menu.open .stroke:first-of-type {
+#wrapper header.main-header .container div.menu.open .stroke:first-of-type {
   transform: rotate(45deg) translate(0px, -1px);
 }
-#wrapper header#header .container div.menu.open .stroke:nth-child(2) {
+#wrapper header.main-header .container div.menu.open .stroke:nth-child(2) {
   background: #fff;
   transform: rotate(-45deg) translate(6px, -6px);
 }
-#wrapper header#header .container div.menu.open .text {
+#wrapper header.main-header .container div.menu.open .text {
   color: #000;
 }
 @media only screen and (min-width: 851px) {
-  #wrapper header#header .container div.menu {
+  #wrapper header.main-header .container div.menu {
     display: none;
   }
 }

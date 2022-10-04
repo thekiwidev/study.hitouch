@@ -39,3 +39,12 @@ new Glide("#platform-slider", {
   hoverpause: true,
   autoplay: 10000 | true,
 }).mount();
+
+// glidejs slider for the Students, Agents, & Schools
+
+new Glide("#contact-slides", {
+  type: "carousel",
+  autoplay: true,
+  hoverpause: true,
+  autoplay: 5000 | true,
+}).mount();
