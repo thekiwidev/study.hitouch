@@ -704,7 +704,7 @@ h4 {
 #wrapper section.contact-us .content {
   display: flex;
   padding: 5rem 0;
-  background: #f7f7f7;
+  align-items: center;
 }
 #wrapper section.contact-us .content .left-segment {
   width: 50%;
@@ -754,7 +754,9 @@ h4 {
 #wrapper section.contact-us .content .right-segment {
   width: 50%;
   height: 100%;
-  background: #f9f9f9;
+}
+#wrapper section.contact-us .content .right-segment li.glide__slide {
+  text-align: center;
 }
 #wrapper footer.main-footer {
   padding: 5rem;
