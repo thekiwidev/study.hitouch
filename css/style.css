@@ -275,6 +275,11 @@ p {
   width: 70%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.services-section header.services-header {
+    width: 100%;
+  }
+}
 #wrapper section.services-section header.services-header h1 {
   margin: 2rem auto;
   text-align: center;
@@ -326,12 +331,23 @@ p {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.special-section .contents {
+    flex-direction: column;
+  }
+}
 #wrapper section.special-section .contents .left {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.special-section .contents .left {
+    width: 90%;
+    margin: 0 auto 2rem;
+  }
 }
 #wrapper section.special-section .contents .left .main-image {
   height: 440px;
@@ -356,13 +372,28 @@ p {
 #wrapper section.special-section .contents .right {
   flex: 1;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.special-section .contents .right {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.special-section .contents .right header.special-section-header h1 {
+    text-align: center;
+  }
+}
 #wrapper section.special-section .contents .right header.special-section-header h1 span {
   color: #00afef;
-  font-family: "Abyssinica SIL", sans-serif;
 }
 #wrapper section.special-section .contents .right header.special-section-header p {
   width: 60%;
   margin: 2rem 0;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.special-section .contents .right header.special-section-header p {
+    width: 100%;
+  }
 }
 #wrapper section.platform-section {
   width: 100%;
@@ -378,6 +409,11 @@ p {
 #wrapper section.platform-section .container header.platform-header {
   width: 70%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.platform-section .container header.platform-header {
+    width: 90%;
+  }
 }
 #wrapper section.platform-section .container header.platform-header h1 {
   text-align: center;
@@ -435,12 +471,16 @@ p {
   width: 70%;
   margin: auto;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.get-started header.get-started-header {
+    width: 90%;
+  }
+}
 #wrapper section.get-started header.get-started-header h1 {
   text-align: center;
 }
 #wrapper section.get-started header.get-started-header p {
   margin: 2rem auto;
-  width: 60%;
   text-align: center;
 }
 #wrapper section.get-started .categories {
@@ -466,7 +506,7 @@ p {
   background: rgba(0, 0, 0, 0.5019607843);
 }
 #wrapper section.get-started .categories .category img {
-  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: -1;
   transition: 0.3s;
@@ -501,6 +541,11 @@ p {
   width: 70%;
   margin: auto;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.milestones header.milestones-header {
+    width: 90%;
+  }
+}
 #wrapper section.milestones header.milestones-header h1 {
   text-align: center;
 }
@@ -513,6 +558,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 #wrapper section.milestones .milestones-container .milestone {
   width: 200px;
@@ -537,6 +583,11 @@ p {
 #wrapper section.blog-section header.blog-section-header {
   width: 70%;
   margin: auto;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.blog-section header.blog-section-header {
+    width: 90%;
+  }
 }
 #wrapper section.blog-section header.blog-section-header h1 {
   text-align: center;
@@ -716,6 +767,11 @@ p {
 #wrapper section.contact-us header.contact-section-header {
   text-align: center;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.contact-us header.contact-section-header {
+    width: 90%;
+  }
+}
 #wrapper section.contact-us header.contact-section-header h1 {
   line-height: 1;
   margin-bottom: 1rem;
@@ -725,8 +781,19 @@ p {
   padding: 5rem 0;
   align-items: center;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.contact-us .content {
+    flex-direction: column;
+  }
+}
 #wrapper section.contact-us .content .left-segment {
   width: 50%;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.contact-us .content .left-segment {
+    width: 90%;
+    margin: auto;
+  }
 }
 #wrapper section.contact-us .content .left-segment form h3 {
   margin-bottom: 2.5rem;
@@ -767,6 +834,13 @@ p {
   height: 100%;
   border-left: 1px solid #e0dada;
   padding: 5rem 2rem;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.contact-us .content .right-segment {
+    width: 90%;
+    margin: auto;
+    border: none;
+  }
 }
 #wrapper section.contact-us .content .right-segment h3 {
   text-align: center;
@@ -923,10 +997,16 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper footer.main-footer .container {
+    flex-direction: column;
+  }
+}
 #wrapper footer.main-footer .container .footer-top {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
   padding-bottom: 5rem;
   border-bottom: 1px solid #373435;
 }
@@ -985,11 +1065,6 @@ p {
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon img {
   width: 20px;
-}
-#wrapper footer.main-footer .container .footer-top .immigration,
-#wrapper footer.main-footer .container .footer-top .quick-links,
-#wrapper footer.main-footer .container .footer-top .newsletter {
-  flex: 1;
 }
 #wrapper footer.main-footer .container .footer-top .immigration h2.header,
 #wrapper footer.main-footer .container .footer-top .quick-links h2.header,
