@@ -1,6 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@font-face {
+  font-family: themeFont;
+  src: local("themeFont"), url("../assets/fonts/Poppins-Regular.ttf");
+  src: local("themeFont"), url("../assets/fonts/Poppins-Bold.ttf");
+  src: local("themeFont"), url("../assets/fonts/Poppins-Light.ttf");
+  src: local("themeFont"), url("../assets/fonts/Poppins-Extra-Light.ttf");
+}
+* {
+  font-family: themeFont;
+}
+
 h1 {
   font-size: 3rem;
+  font-family: themeFont;
 }
 
 h2 {
@@ -26,7 +37,6 @@ p {
   outline: none;
   text-decoration: none;
   list-style: none;
-  font-family: "Open Sans", sans-serif;
 }
 
 .container {
