@@ -450,12 +450,22 @@ p {
   width: 90%;
   margin: auto;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.platform-section .container #platform-slider .glide__slide {
+    width: 100%;
+  }
+}
 #wrapper section.platform-section .container #platform-slider .glide__slide .contents {
   display: flex;
   align-items: center;
   gap: 3rem;
   border-radius: 0.5rem;
   padding: 2rem;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.platform-section .container #platform-slider .glide__slide .contents {
+    flex-direction: column;
+  }
 }
 #wrapper section.platform-section .container #platform-slider .glide__slide .contents .img {
   height: 380px;
@@ -809,7 +819,7 @@ p {
 }
 @media only screen and (max-width: 851px) {
   #wrapper section.contact-us .content .left-segment {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 }

@@ -547,10 +547,18 @@
           width: 90%;
           margin: auto;
 
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
+
           .contents {
             display: flex;
             align-items: center;
             gap: 3rem;
+
+            @media only screen and (max-width: 850px) {
+              flex-direction: column;
+            }
 
             border-radius: 0.5rem;
 
@@ -1024,7 +1032,7 @@
         width: 50%;
 
         @media only screen and (max-width: 851px) {
-          width: 90%;
+          width: 100%;
           margin: auto;
         }
 
