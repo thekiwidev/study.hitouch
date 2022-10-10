@@ -1,9 +1,12 @@
 @font-face {
   font-family: themeFont;
   src: local("themeFont"), url("../assets/fonts/Poppins-Regular.ttf");
-  src: local("themeFont"), url("../assets/fonts/Poppins-Bold.ttf");
-  src: local("themeFont"), url("../assets/fonts/Poppins-Light.ttf");
-  src: local("themeFont"), url("../assets/fonts/Poppins-Extra-Light.ttf");
+}
+@font-face {
+  font-family: themeFont;
+  src: local("themeFont"), url("../assets/fonts/Poppins-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
 }
 * {
   font-family: themeFont;
@@ -614,6 +617,11 @@ p {
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.blog-section .blogs-container {
+    flex-direction: column;
+  }
+}
 #wrapper section.blog-section .blogs-container .blog {
   max-width: 400px;
   border-radius: 0.3rem;
@@ -644,7 +652,6 @@ p {
 }
 #wrapper section.blog-section .blogs-container .blog .blog-body header.blog-header a.blog-title {
   font-size: 1.5rem;
-  font-family: "Abyssinica SIL", san-serif;
   width: 80%;
   font-weight: 600;
   color: #000;
@@ -732,12 +739,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   padding: 4rem;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony {
-  max-width: 350px;
   border-radius: 0.3rem;
   box-shadow: 8px 10px 35px rgba(0, 0, 0, 0.3137254902);
+  width: 88%;
 }
 #wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text {
   padding: 2rem;

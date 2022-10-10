@@ -771,6 +771,10 @@
       justify-content: center;
       gap: 2rem;
 
+      @media only screen and (max-width: 851px) {
+        flex-direction: column;
+      }
+
       .blog {
         max-width: 400px;
         border-radius: 0.3rem;
@@ -809,7 +813,6 @@
 
             a.blog-title {
               font-size: 1.5rem;
-              font-family: "Abyssinica SIL", san-serif;
               width: 80%;
 
               font-weight: 600;
@@ -922,16 +925,23 @@
       width: 0;
     }
     #testimonies-slides {
+      // padding: 2rem;
+
       .testimonies {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
         padding: 4rem;
 
+        @media only screen and (max-width: 851px) {
+          // flex-direction: column;
+        }
+
         .testimony {
-          max-width: 350px;
           border-radius: 0.3rem;
           box-shadow: 8px 10px 35px #00000050;
+          width: 88%;
 
           .testimony-text {
             padding: 2rem;

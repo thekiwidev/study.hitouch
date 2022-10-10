@@ -25,10 +25,11 @@ document.addEventListener("scroll", () => {
 new Glide("#testimonies-slides", {
   type: "carousel",
   startAt: 1,
-  perView: 3,
+  perView: window.innerWidth > 851 ? 2 : 1,
   autoplay: 5000 | true,
   gap: 5,
   hoverpause: false,
+
 }).mount();
 
 // glidejs slider for the Students, Agents, & Schools
