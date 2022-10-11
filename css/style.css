@@ -610,10 +610,20 @@ p {
   gap: 2rem;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper section.milestones .milestones-container {
+    padding: 2rem;
+  }
+}
 #wrapper section.milestones .milestones-container .milestone {
   width: 200px;
   max-width: 350px;
   margin: 3rem 0;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.milestones .milestones-container .milestone {
+    width: 45%;
+  }
 }
 #wrapper section.milestones .milestones-container .milestone img {
   width: 48px;

@@ -727,11 +727,20 @@
 
       flex-wrap: wrap;
 
+      @media only screen and (max-width: 851px) {
+        padding: 2rem;
+      }
+
       .milestone {
         width: 200px;
         max-width: 350px;
 
         margin: 3rem 0;
+
+        @media only screen and (max-width: 851px) {
+          width: 45%;
+        }
+        
         img {
           width: 48px;
         }
