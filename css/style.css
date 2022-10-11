@@ -529,8 +529,14 @@ p {
 #wrapper section.get-started .categories {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   margin: 3rem auto;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper section.get-started .categories {
+    flex-direction: column;
+  }
 }
 #wrapper section.get-started .categories .category {
   width: 400px;
@@ -550,6 +556,7 @@ p {
 }
 #wrapper section.get-started .categories .category img {
   height: 100%;
+  width: 100%;
   position: absolute;
   z-index: -1;
   transition: 0.3s;

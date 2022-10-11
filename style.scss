@@ -621,9 +621,14 @@
     .categories {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 1.5rem;
 
       margin: 3rem auto;
+
+      @media only screen and (max-width: 851px) {
+        flex-direction: column;
+      }
 
       .category {
         width: 400px;
@@ -648,6 +653,7 @@
 
         img {
           height: 100%;
+          width: 100%;
           position: absolute;
           z-index: -1;
           transition: 0.3s;
