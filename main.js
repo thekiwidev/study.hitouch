@@ -35,7 +35,6 @@ new Glide("#testimonies-slides", {
     },
   },
   autoplay: 5000 | true,
-  gap: 5,
   hoverpause: false,
 }).mount();
 

@@ -772,50 +772,56 @@ p {
   transition: width 400ms ease;
   width: 0;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies {
+#wrapper section.testimonials div#testimonies-slides {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+#wrapper section.testimonials div#testimonies-slides ul.testimonies {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 4rem;
+  padding: 5rem;
+  padding-left: 6rem;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony {
+  display: block;
   border-radius: 0.3rem;
-  box-shadow: 8px 10px 35px rgba(0, 0, 0, 0.3137254902);
-  width: 88%;
+  box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.3137254902);
+  width: 90%;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text {
   padding: 2rem;
   padding-bottom: 1rem;
   border-radius: 0.3rem;
   position: relative;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text p {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text p {
   z-index: 5;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .testimony-text img.quote-close {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text img.quote-close {
   position: absolute;
   right: 6%;
   bottom: -25%;
   z-index: -2;
   opacity: 0.5;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails {
   padding: 2rem;
   padding-top: 1rem;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image {
   margin-bottom: 1rem;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails .profile-image img {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image img {
   width: 64px;
   margin: auto;
   display: block;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails h4 {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails h4 {
   text-align: center;
 }
-#wrapper section.testimonials #testimonies-slides .testimonies .testimony .client-deatails p {
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails p {
   text-align: center;
   color: #777;
 }
