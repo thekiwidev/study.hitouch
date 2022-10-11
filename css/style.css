@@ -843,6 +843,7 @@ p {
 }
 #wrapper section.contact-us .content .left-segment {
   width: 50%;
+  margin: auto;
 }
 @media only screen and (max-width: 851px) {
   #wrapper section.contact-us .content .left-segment {
@@ -852,19 +853,24 @@ p {
 }
 #wrapper section.contact-us .content .left-segment form h3 {
   margin-bottom: 2.5rem;
+  margin-left: 10%;
 }
 #wrapper section.contact-us .content .left-segment form .input {
   width: 100%;
+  padding: 0 6%;
 }
 #wrapper section.contact-us .content .left-segment form .input label {
   font-size: 1.2rem;
   display: block;
   margin-bottom: 0.5rem;
+  margin-left: 5%;
 }
 #wrapper section.contact-us .content .left-segment form .input input,
 #wrapper section.contact-us .content .left-segment form .input textarea,
 #wrapper section.contact-us .content .left-segment form .input select {
+  display: block;
   width: 90%;
+  margin: auto;
   padding: 1rem;
   margin-bottom: 1.5rem;
   outline: none;
