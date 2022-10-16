@@ -4,8 +4,16 @@ const menu = document.querySelector("div.menu");
 const header = document.getElementById("header");
 
 menu.addEventListener("click", () => {
+  // menu.classList.toggle("open");
+
   menu.classList.toggle("open");
   nav.classList.toggle("open");
+
+  if (nav.classList.contains("open")) {
+    nav.setAttribute("style", `top:${header.offsetHeight}px;`);
+  } else {
+    nav.setAttribute("style", `top:-100vh;`);
+  }
 });
 
 document.addEventListener("scroll", () => {

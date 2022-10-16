@@ -155,10 +155,6 @@
           background: lighten($theme-blue, 50);
 
           transition: 0.4s ease-in-out;
-
-          &.open {
-            top: 8.5vh;
-          }
         }
 
         &.active {
@@ -358,7 +354,7 @@
           padding: 1rem;
 
           .btn:first-of-type {
-            margin-right: 1rem;
+            margin-right: 0.2rem;
           }
         }
       }

@@ -182,9 +182,6 @@ p {
     background: #effbff;
     transition: 0.4s ease-in-out;
   }
-  #wrapper header.main-header .container nav.navbar.open {
-    top: 8.5vh;
-  }
 }
 #wrapper header.main-header .container nav.navbar.active ul.navlinks a {
   color: #000;
@@ -335,7 +332,7 @@ p {
   padding: 1rem;
 }
 #wrapper section.hero-section .container .heading-text .cta-container .btn:first-of-type {
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 #wrapper section.services-section {
   margin: 5rem 0;
