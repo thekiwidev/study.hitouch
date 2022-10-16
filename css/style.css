@@ -1140,11 +1140,11 @@ p {
   border-radius: 0.3rem;
   transition: 0.3s all;
 }
-#wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.twitter {
-  background-color: #0cae74;
+#wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.youtube {
+  background-color: #fc1212;
 }
-#wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.twitter:hover {
-  background: rgba(12, 174, 117, 0.8156862745);
+#wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.youtube:hover {
+  background: rgba(252, 18, 18, 0.8156862745);
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.instagram {
   background-color: #dd246e;
@@ -1153,16 +1153,16 @@ p {
   background: rgba(221, 36, 110, 0.8156862745);
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.website {
-  background-color: #8007e6;
+  background-color: #0cae74;
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.website:hover {
-  background: rgba(12, 174, 116, 0.8156862745);
+  background: #018859;
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.facebook {
   background-color: #2d69f0;
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon.facebook:hover {
-  background: rgba(45, 105, 240, 0.8156862745);
+  background: #063bb6;
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons .social-icon img {
   width: 20px;

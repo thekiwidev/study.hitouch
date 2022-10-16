@@ -1411,11 +1411,11 @@
 
               transition: 0.3s all;
 
-              &.twitter {
-                background-color: #0cae74;
+              &.youtube {
+                background-color: #fc1212;
 
                 &:hover {
-                  background: #0cae75d0;
+                  background: #fc1212d0;
                 }
               }
 
@@ -1427,17 +1427,17 @@
                 }
               }
               &.website {
-                background-color: #8007e6;
+                background-color: #0cae74;
 
                 &:hover {
-                  background: #0cae74d0;
+                  background: #018859;
                 }
               }
               &.facebook {
                 background-color: #2d69f0;
 
                 &:hover {
-                  background: #2d69f0d0;
+                  background: #063bb6;
                 }
               }
 
