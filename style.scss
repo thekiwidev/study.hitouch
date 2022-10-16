@@ -24,6 +24,7 @@
 
   font-size: 1rem;
   font-weight: 600;
+  text-align: center;
 
   cursor: pointer;
   transition: 0.3s all;
@@ -355,8 +356,10 @@
 
         .cta-container {
           padding: 1rem;
-          display: flex;
-          gap: 1rem;
+
+          .btn:first-of-type {
+            margin-right: 1rem;
+          }
         }
       }
     }
