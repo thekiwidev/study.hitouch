@@ -109,10 +109,6 @@
       align-items: center;
       justify-content: space-between;
 
-      // @media only screen and (max-width: 851px) {
-      //   display: none;
-      // }
-
       a.logo {
         cursor: pointer;
         flex: 1;
@@ -145,7 +141,7 @@
         gap: 5rem;
 
         @media only screen and (max-width: 851px) {
-          position: absolute;
+          position: fixed;
           left: 0;
           top: -100vh;
 
@@ -166,11 +162,6 @@
 
         &.active {
           ul.navlinks {
-            @media only screen and (max-width: 851px) {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
             a {
               color: #000;
             }
@@ -188,6 +179,12 @@
           }
         }
         ul.navlinks {
+          @media only screen and (max-width: 851px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
           a {
             color: #fff;
             font-weight: 600;
@@ -197,6 +194,10 @@
             cursor: pointer;
 
             border-bottom: 3px solid #00000000;
+
+            @media only screen and (max-width: 851px) {
+              color: #000;
+            }
 
             &:hover {
               border-color: #00afef;
@@ -210,6 +211,10 @@
           .btn-secondary {
             border-color: #a7a7a755;
             color: #fff;
+
+            @media only screen and (max-width: 851px) {
+              color: #000;
+            }
 
             &:hover {
               border-color: $theme-blue;

@@ -171,7 +171,7 @@ p {
 }
 @media only screen and (max-width: 851px) {
   #wrapper header.main-header .container nav.navbar {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: -100vh;
     height: 92.5vh;
@@ -185,13 +185,6 @@ p {
     top: 8.5vh;
   }
 }
-@media only screen and (max-width: 851px) {
-  #wrapper header.main-header .container nav.navbar.active ul.navlinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 #wrapper header.main-header .container nav.navbar.active ul.navlinks a {
   color: #000;
 }
@@ -203,6 +196,13 @@ p {
   color: #fff;
   border-color: #00afef;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper header.main-header .container nav.navbar ul.navlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 #wrapper header.main-header .container nav.navbar ul.navlinks a {
   color: #fff;
   font-weight: 600;
@@ -210,6 +210,11 @@ p {
   margin: 0 1rem;
   cursor: pointer;
   border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+@media only screen and (max-width: 851px) {
+  #wrapper header.main-header .container nav.navbar ul.navlinks a {
+    color: #000;
+  }
 }
 #wrapper header.main-header .container nav.navbar ul.navlinks a:hover {
   border-color: #00afef;
@@ -221,6 +226,11 @@ p {
 #wrapper header.main-header .container nav.navbar .action .btn-secondary {
   border-color: rgba(167, 167, 167, 0.3333333333);
   color: #fff;
+}
+@media only screen and (max-width: 851px) {
+  #wrapper header.main-header .container nav.navbar .action .btn-secondary {
+    color: #000;
+  }
 }
 #wrapper header.main-header .container nav.navbar .action .btn-secondary:hover {
   border-color: #00afef;
