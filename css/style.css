@@ -171,7 +171,25 @@ p {
 }
 @media only screen and (max-width: 851px) {
   #wrapper header.main-header .container nav.navbar {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: -100vh;
+    height: 92.5vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background: #effbff;
+    transition: 0.4s ease-in-out;
+  }
+  #wrapper header.main-header .container nav.navbar.open {
+    top: 8.5vh;
+  }
+}
+@media only screen and (max-width: 851px) {
+  #wrapper header.main-header .container nav.navbar.active ul.navlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 #wrapper header.main-header .container nav.navbar.active ul.navlinks a {
@@ -222,6 +240,12 @@ p {
   z-index: 5;
   cursor: pointer;
 }
+#wrapper header.main-header .container div.menu.active .stroke {
+  background: #373435;
+}
+#wrapper header.main-header .container div.menu.active .text {
+  color: #373435;
+}
 #wrapper header.main-header .container div.menu .stroke {
   width: 30px;
   height: 4px;
@@ -243,7 +267,7 @@ p {
   transform: rotate(45deg) translate(0px, -1px);
 }
 #wrapper header.main-header .container div.menu.open .stroke:nth-child(2) {
-  background: #fff;
+  background: #00afef;
   transform: rotate(-45deg) translate(6px, -6px);
 }
 #wrapper header.main-header .container div.menu.open .text {

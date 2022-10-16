@@ -145,11 +145,32 @@
         gap: 5rem;
 
         @media only screen and (max-width: 851px) {
-          display: none;
+          position: absolute;
+          left: 0;
+          top: -100vh;
+
+          height: 92.5vh;
+          width: 100%;
+
+          flex-direction: column;
+          justify-content: center;
+
+          background: lighten($theme-blue, 50);
+
+          transition: 0.4s ease-in-out;
+
+          &.open {
+            top: 8.5vh;
+          }
         }
 
         &.active {
           ul.navlinks {
+            @media only screen and (max-width: 851px) {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
             a {
               color: #000;
             }
@@ -217,6 +238,15 @@
 
         cursor: pointer;
 
+        &.active {
+          .stroke {
+            background: $theme-black;
+          }
+          .text {
+            color: $theme-black;
+          }
+        }
+
         .stroke {
           width: 30px;
           height: 4px;
@@ -247,7 +277,7 @@
               transform: rotate(45deg) translate(0px, -1px);
             }
             &:nth-child(2) {
-              background: #fff;
+              background: $theme-blue;
               transform: rotate(-45deg) translate(6px, -6px);
             }
           }

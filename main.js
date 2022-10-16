@@ -1,5 +1,5 @@
 const nav = document.querySelector("nav");
-const menu = document.querySelector(".menu");
+const menu = document.querySelector("div.menu");
 
 const header = document.getElementById("header");
 
@@ -13,10 +13,12 @@ document.addEventListener("scroll", () => {
     header.classList.add("active");
     document.querySelector("nav.navbar").classList.add("active");
     document.querySelector("a.logo").classList.add("active");
+    menu.classList.add("active");
   } else {
     header.classList.remove("active");
     document.querySelector("nav.navbar").classList.remove("active");
     document.querySelector("a.logo").classList.remove("active");
+    menu.classList.remove("active");
   }
 });
 
