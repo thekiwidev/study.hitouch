@@ -16,6 +16,10 @@
   margin: auto;
 }
 
+// -----------------------------------------------------------
+// btns
+// -----------------------------------------------------------
+
 .btn {
   display: inline-block;
   padding: 0.7rem 1.6rem;
@@ -403,7 +407,11 @@
         padding: 2rem;
         border-radius: 0.5rem;
 
-        width: 280px;
+        max-width: 280px;
+
+        @media only screen and (max-width: 300px) {
+          max-width: 300px;
+        }
 
         &.study-visa {
           background: #2d69f0;
@@ -601,13 +609,16 @@
             padding: 2rem;
 
             .img {
-              height: 380px;
               flex: 1;
 
               img {
                 max-width: 350px;
                 border-radius: 0.3rem;
                 object-fit: contain;
+
+                @media only screen and (max-width: 850px) {
+                  max-width: 100%;
+                }
               }
             }
 
@@ -996,6 +1007,12 @@
 
         padding: 5rem;
         padding-left: 6rem;
+
+        @media only screen and (max-width: 850px) {
+          .glide__slide {
+            margin-left: 1rem;
+          }
+        }
 
         .testimony {
           display: block;
