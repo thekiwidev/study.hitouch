@@ -326,6 +326,7 @@ p {
   padding: 1rem;
   margin-bottom: 1rem;
   color: #fff;
+  line-height: 1;
 }
 #wrapper section.hero-section .container .heading-text .cta-container {
   padding: 1rem;
