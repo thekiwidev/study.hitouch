@@ -1,0 +1,12 @@
+{
+  "name": "study.hitouch",
+  "version": "1.0.0",
+  "description": "A website that makes study abroad easy for students",
+  "main": "main.js",
+  "repository": "https://github.com/thekiwidev/study.hitouch.git",
+  "author": "thekiwidev <adedotungabriel20@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
