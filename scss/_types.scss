@@ -1,15 +1,29 @@
-// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
-
-@font-face {
-  font-family: themeFont;
-  src: local("themeFont"), url("../assets/fonts/Poppins-Regular.ttf");
-}
-
 @font-face {
   font-family: themeFont;
   src: local("themeFont"), url("../assets/fonts/Poppins-Regular.ttf");
   font-style: normal;
   font-weight: normal;
+}
+
+@font-face {
+  font-family: themeFont;
+  src: local("themeFont"), url("../assets/fonts/Poppins-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: themeFont;
+  src: local("themeFont"), url("../assets/fonts/Poppins-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: themeFont;
+  src: local("themeFont"), url("../assets/fonts/Poppins-Bold.ttf");
+  font-style: normal;
+  font-weight: bold;
 }
 
 * {
