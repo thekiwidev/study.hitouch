@@ -1145,6 +1145,20 @@
               }
             }
           }
+
+          button.btn-form {
+            display: block;
+            width: 90%;
+            margin: auto;
+
+            text-transform: uppercase;
+
+            border: 2px solid $theme-blue;
+
+            &:hover {
+              border: 2px solid $theme-blue;
+            }
+          }
         }
       }
       .right-segment {
