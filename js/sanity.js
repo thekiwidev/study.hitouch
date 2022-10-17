@@ -4,7 +4,7 @@
 let PROJECT_ID = "kstbebtk";
 let DATASET = "production";
 
-let QUERY = encodeURIComponent('*[_type === "animal"]');
+let QUERY = encodeURIComponent('*[_type == "animal"]');
 
 // Compose the URL for your project's endpoint and add the query
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
