@@ -110,6 +110,11 @@
       align-items: center;
       justify-content: space-between;
 
+      @media only screen and (max-width: 851px) {
+        display: grid;
+        place-content: center;
+      }
+
       a.logo {
         cursor: pointer;
         flex: 1;
@@ -126,10 +131,6 @@
 
         &.active {
           background-image: url("../assets/logo-black.png");
-        }
-
-        @media only screen and (max-width: 851px) {
-          width: 30%;
         }
       }
 
@@ -1059,6 +1060,8 @@
   // ----------------------------------------------------------
 
   section.contact-us {
+    margin-top: 3rem;
+
     header.contact-section-header {
       text-align: center;
 

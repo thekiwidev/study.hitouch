@@ -158,6 +158,12 @@ p {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 851px) {
+  #wrapper header.main-header .container {
+    display: grid;
+    place-content: center;
+  }
+}
 #wrapper header.main-header .container a.logo {
   cursor: pointer;
   flex: 1;
@@ -172,11 +178,6 @@ p {
 }
 #wrapper header.main-header .container a.logo.active {
   background-image: url("../assets/logo-black.png");
-}
-@media only screen and (max-width: 851px) {
-  #wrapper header.main-header .container a.logo {
-    width: 30%;
-  }
 }
 #wrapper header.main-header .container nav.navbar {
   flex: 9;
@@ -882,6 +883,9 @@ p {
 #wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails p {
   text-align: center;
   color: #777;
+}
+#wrapper section.contact-us {
+  margin-top: 3rem;
 }
 #wrapper section.contact-us header.contact-section-header {
   text-align: center;
