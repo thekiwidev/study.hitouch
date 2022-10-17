@@ -38,16 +38,16 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 @media only screen and (max-width: 851px) {
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 @media only screen and (max-width: 851px) {
   h3 {
@@ -962,7 +962,7 @@ p {
 }
 @media only screen and (max-width: 851px) {
   #wrapper section.contact-us .content .right-segment {
-    width: 90%;
+    width: 100%;
     margin: auto;
     border: none;
   }
@@ -988,6 +988,7 @@ p {
 }
 #wrapper section.contact-us .content .right-segment li.glide__slide h4 {
   text-align: center;
+  font-weight: 500;
 }
 #wrapper footer.main-footer {
   padding: 1rem;

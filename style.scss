@@ -1152,7 +1152,7 @@
         padding: 5rem 2rem;
 
         @media only screen and (max-width: 851px) {
-          width: 90%;
+          width: 100%;
           margin: auto;
 
           border: none;
@@ -1182,6 +1182,7 @@
 
           h4 {
             text-align: center;
+            font-weight: 500;
           }
         }
       }
