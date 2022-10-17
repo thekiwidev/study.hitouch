@@ -1,20 +1,28 @@
+// ------------------------------------
+// Nav and Menu toggle event
+// ------------------------------------
+
 const nav = document.querySelector("nav");
 const menu = document.querySelector("div.menu");
 
 const header = document.getElementById("header");
 
 menu.addEventListener("click", () => {
-  // menu.classList.toggle("open");
-
+  // toggle open class
   menu.classList.toggle("open");
   nav.classList.toggle("open");
 
+  // show the nav beneath the header
   if (nav.classList.contains("open")) {
     nav.setAttribute("style", `top:${header.offsetHeight}px;`);
   } else {
     nav.setAttribute("style", `top:-100vh;`);
   }
 });
+
+// ----------------------------------------
+// Header scroll event
+// ----------------------------------------
 
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
@@ -29,6 +37,10 @@ document.addEventListener("scroll", () => {
     menu.classList.remove("active");
   }
 });
+
+// -----------------------------------------
+// Sliders
+// -----------------------------------------
 
 // glidejs slider for the testimonials-section
 
@@ -65,3 +77,19 @@ new Glide("#contact-slides", {
   hoverpause: false,
   autoplay: 3000 | true,
 }).mount();
+
+// ---------------------------------------------
+// Truncating Texts
+// ---------------------------------------------
+
+const truncate = (string, number) => {
+  const newText = string.substring(0, number);
+  return newText;
+};
+
+// truncate testimonies
+let testimoniesTexts = document.querySelectorAll(".testimony-text p");
+
+testimoniesTexts.forEach((txt) => {
+  txt.innerText = `${truncate(txt.innerText, 200)}...`;
+});
