@@ -351,7 +351,7 @@ p {
   margin-right: 0.2rem;
 }
 #wrapper section.services-section {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 #wrapper section.services-section header.services-header {
   width: 100%;
@@ -359,7 +359,7 @@ p {
   padding: 0 1rem;
 }
 #wrapper section.services-section header.services-header h1 {
-  margin: 2rem auto;
+  margin: 1rem auto;
   text-align: center;
 }
 #wrapper section.services-section header.services-header p {
@@ -371,7 +371,7 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
 }
 #wrapper section.services-section .services-boxes .service-box {
   padding: 2rem;
@@ -512,8 +512,7 @@ p {
   border-radius: 0.5rem;
 }
 #wrapper section.platform-section .container #platform-slider .glide__slide {
-  width: 90%;
-  margin: auto;
+  align-self: stretch;
 }
 @media only screen and (max-width: 850px) {
   #wrapper section.platform-section .container #platform-slider .glide__slide {
@@ -524,6 +523,8 @@ p {
   display: flex;
   align-items: center;
   gap: 3rem;
+  width: 99%;
+  flex-shrink: none;
   background: #00afef;
   border-radius: 0.5rem;
   padding: 2rem;
@@ -551,12 +552,16 @@ p {
   flex: 2.3;
   color: #fff;
 }
+#wrapper section.platform-section .container #platform-slider .glide__slide .contents .texts a.btn:hover {
+  background: #fff;
+  color: #000;
+}
 #wrapper section.platform-section .container #platform-slider .glide__slide .contents p {
   margin: 2rem 0;
   width: 80%;
 }
 #wrapper section.get-started {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 #wrapper section.get-started header.get-started-header {
   width: 70%;
@@ -569,9 +574,10 @@ p {
 }
 #wrapper section.get-started header.get-started-header h1 {
   text-align: center;
+  line-height: 1.1;
 }
 #wrapper section.get-started header.get-started-header p {
-  margin: 2rem auto;
+  margin: 1rem auto;
   text-align: center;
 }
 #wrapper section.get-started .categories {
@@ -633,10 +639,10 @@ p {
   background: #00afef;
 }
 #wrapper section.milestones {
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 #wrapper section.milestones header.milestones-header {
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 @media only screen and (max-width: 851px) {
@@ -686,7 +692,7 @@ p {
   font-size: 1.2rem;
 }
 #wrapper section.blog-section {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 #wrapper section.blog-section header.blog-section-header {
   width: 70%;
@@ -701,7 +707,7 @@ p {
   text-align: center;
 }
 #wrapper section.blog-section header.blog-section-header p {
-  margin: 2rem 0;
+  margin: 1rem 0;
   text-align: center;
 }
 #wrapper section.blog-section .blogs-container {
@@ -811,14 +817,15 @@ p {
   width: max-content;
 }
 #wrapper section.testimonials {
-  margin: 5rem auto;
+  margin: 2rem auto;
+  background: #effbff;
 }
 #wrapper section.testimonials header.testimonials-header {
   width: 90%;
   margin: auto;
 }
 #wrapper section.testimonials header.testimonials-header h1 {
-  margin: 2rem auto;
+  padding: 1rem 0;
   text-align: center;
 }
 #wrapper section.testimonials header.testimonials-header p {
@@ -842,7 +849,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem 5rem;
   padding-left: 6rem;
 }
 #wrapper section.testimonials div#testimonies-slides ul.testimonies .glide__slide {
@@ -858,6 +865,7 @@ p {
   display: block;
   border-radius: 0.3rem;
   box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.3137254902);
+  background: #fff;
   width: 90%;
 }
 #wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text {
@@ -902,7 +910,7 @@ p {
   font-style: italic;
 }
 #wrapper section.contact-us {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 #wrapper section.contact-us header.contact-section-header {
   text-align: center;
@@ -919,7 +927,7 @@ p {
 }
 #wrapper section.contact-us .content {
   display: flex;
-  padding: 5rem 0;
+  padding: 2rem 0;
   align-items: center;
 }
 @media only screen and (max-width: 851px) {
