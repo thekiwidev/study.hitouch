@@ -86,8 +86,8 @@ const truncate = (string, number) => {
 };
 
 // truncate testimonies
-let testimoniesTexts = document.querySelectorAll(".testimony-text p");
+// let testimoniesTexts = document.querySelectorAll(".testimony-text p");
 
-testimoniesTexts.forEach((txt) => {
-  txt.innerText = `${truncate(txt.innerText, 200)}...`;
-});
+// testimoniesTexts.forEach((txt) => {
+//   txt.innerText = `${truncate(txt.innerText, 200)}...`;
+// });
