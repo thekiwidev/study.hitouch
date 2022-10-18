@@ -16,6 +16,7 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     animal, // add the document type to this array
-    testimony, // add the document type to this array
+    // list of all testimonies
+    testimony, // {testimony, name, location, service, image}
   ]),
 });
