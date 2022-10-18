@@ -16,12 +16,6 @@
   font-style: normal;
   font-weight: 600;
 }
-@font-face {
-  font-family: themeFont;
-  src: local("themeFont"), url("../assets/fonts/Poppins-Bold.ttf");
-  font-style: normal;
-  font-weight: bold;
-}
 * {
   font-family: themeFont;
 }
@@ -376,23 +370,18 @@ p {
 #wrapper section.services-section .services-boxes .service-box {
   padding: 2rem;
   border-radius: 0.5rem;
-  max-width: 280px;
+  max-width: 290px;
 }
-@media only screen and (max-width: 300px) {
-  #wrapper section.services-section .services-boxes .service-box {
-    max-width: 300px;
-  }
-}
-#wrapper section.services-section .services-boxes .service-box.study-visa {
+#wrapper section.services-section .services-boxes .service-box.study-abroad {
   background: #2d69f0;
 }
-#wrapper section.services-section .services-boxes .service-box.work-visa {
+#wrapper section.services-section .services-boxes .service-box.travel-insurance {
   background: #dd246e;
 }
-#wrapper section.services-section .services-boxes .service-box.tourist-visa {
+#wrapper section.services-section .services-boxes .service-box.e-visa {
   background: #8007e6;
 }
-#wrapper section.services-section .services-boxes .service-box.business-visa {
+#wrapper section.services-section .services-boxes .service-box.flight-hotel-booking {
   background: #0cae74;
 }
 #wrapper section.services-section .services-boxes .service-box .icon {
@@ -404,7 +393,7 @@ p {
 #wrapper section.services-section .services-boxes .service-box .texts {
   color: #fff;
 }
-#wrapper section.services-section .services-boxes .service-box .texts h3 {
+#wrapper section.services-section .services-boxes .service-box .texts h4 {
   margin-bottom: 1.4rem;
 }
 #wrapper section.special-section {

@@ -404,25 +404,25 @@
         padding: 2rem;
         border-radius: 0.5rem;
 
-        max-width: 280px;
+        max-width: 290px;
 
         @media only screen and (max-width: 300px) {
-          max-width: 300px;
+          // max-width: 300px;
         }
 
-        &.study-visa {
+        &.study-abroad {
           background: #2d69f0;
         }
 
-        &.work-visa {
+        &.travel-insurance {
           background: #dd246e;
         }
 
-        &.tourist-visa {
+        &.e-visa {
           background: #8007e6;
         }
 
-        &.business-visa {
+        &.flight-hotel-booking {
           background: #0cae74;
         }
 
@@ -437,7 +437,7 @@
         .texts {
           color: #fff;
 
-          h3 {
+          h4 {
             margin-bottom: 1.4rem;
           }
         }
