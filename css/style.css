@@ -852,9 +852,13 @@ p {
   padding: 5rem;
   padding-left: 6rem;
 }
+#wrapper section.testimonials div#testimonies-slides ul.testimonies .glide__slide {
+  flex-shrink: inherit;
+}
 @media only screen and (max-width: 850px) {
   #wrapper section.testimonials div#testimonies-slides ul.testimonies .glide__slide {
     margin-left: 1rem;
+    flex-shrink: 0;
   }
 }
 #wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony {

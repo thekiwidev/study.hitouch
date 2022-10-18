@@ -1,8 +1,5 @@
-// 7afceb4e - 4e87 - 49ba - bdf5 - 80e361245b55
-// import dotenv from "dotenv";
-
-let PROJECT_ID = "kstbebtk";
-let DATASET = "production";
+const PROJECT_ID = "kstbebtk";
+const DATASET = "production";
 
 let QUERY = encodeURIComponent('*[_type == "animal"]');
 
@@ -39,3 +36,6 @@ fetch(URL)
     // }
   })
   .catch((err) => console.error(err));
+
+
+  // 

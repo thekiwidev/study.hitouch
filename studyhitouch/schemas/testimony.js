@@ -14,9 +14,14 @@ export default {
       title: "Testimony",
     },
     {
-      name: "occupation",
+      name: "service",
       type: "string",
-      title: "Occupation",
+      title: "Service Rendered",
+    },
+    {
+      name: "location",
+      type: "string",
+      title: "Location",
     },
     {
       title: "Client's Image",
