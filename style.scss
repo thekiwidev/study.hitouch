@@ -377,12 +377,9 @@
     margin: 5rem 0;
 
     header.services-header {
-      width: 70%;
+      width: 100%;
       margin: 0 auto;
-
-      @media only screen and (max-width: 851px) {
-        width: 100%;
-      }
+      padding: 0 1rem;
 
       h1 {
         margin: 2rem auto;
@@ -556,12 +553,8 @@
       padding: 5rem 0;
 
       header.platform-header {
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
-
-        @media only screen and (max-width: 851px) {
-          width: 90%;
-        }
 
         h1 {
           text-align: center;
@@ -600,6 +593,8 @@
             align-items: center;
             gap: 3rem;
 
+            background: $theme-blue;
+
             @media only screen and (max-width: 850px) {
               flex-direction: column;
             }
@@ -624,6 +619,8 @@
 
             .texts {
               flex: 2.3;
+
+              color: #fff;
             }
 
             p {

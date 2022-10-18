@@ -354,13 +354,9 @@ p {
   margin: 5rem 0;
 }
 #wrapper section.services-section header.services-header {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
-}
-@media only screen and (max-width: 851px) {
-  #wrapper section.services-section header.services-header {
-    width: 100%;
-  }
+  padding: 0 1rem;
 }
 #wrapper section.services-section header.services-header h1 {
   margin: 2rem auto;
@@ -494,13 +490,8 @@ p {
   padding: 5rem 0;
 }
 #wrapper section.platform-section .container header.platform-header {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-}
-@media only screen and (max-width: 851px) {
-  #wrapper section.platform-section .container header.platform-header {
-    width: 90%;
-  }
 }
 #wrapper section.platform-section .container header.platform-header h1 {
   text-align: center;
@@ -533,6 +524,7 @@ p {
   display: flex;
   align-items: center;
   gap: 3rem;
+  background: #00afef;
   border-radius: 0.5rem;
   padding: 2rem;
 }
@@ -557,6 +549,7 @@ p {
 }
 #wrapper section.platform-section .container #platform-slider .glide__slide .contents .texts {
   flex: 2.3;
+  color: #fff;
 }
 #wrapper section.platform-section .container #platform-slider .glide__slide .contents p {
   margin: 2rem 0;
