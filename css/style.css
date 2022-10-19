@@ -494,7 +494,7 @@ p {
 }
 @media only screen and (max-width: 850px) {
   #wrapper section.platforms-section .container #platform-slider {
-    width: 100%;
+    width: 98%;
   }
 }
 #wrapper section.platforms-section .container #platform-slider .glide__arrow img {
@@ -507,11 +507,6 @@ p {
 }
 #wrapper section.platforms-section .container #platform-slider .glide__slide {
   align-self: stretch;
-}
-@media only screen and (max-width: 850px) {
-  #wrapper section.platforms-section .container #platform-slider .glide__slide {
-    width: 100%;
-  }
 }
 #wrapper section.platforms-section .container #platform-slider .glide__slide .contents {
   display: flex;

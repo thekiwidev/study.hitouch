@@ -570,7 +570,7 @@
         width: 80%;
 
         @media only screen and (max-width: 850px) {
-          width: 100%;
+          width: 98%;
         }
 
         .glide__arrow {
@@ -586,10 +586,6 @@
 
         .glide__slide {
           align-self: stretch;
-
-          @media only screen and (max-width: 850px) {
-            width: 100%;
-          }
 
           .contents {
             display: flex;
