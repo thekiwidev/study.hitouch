@@ -451,7 +451,7 @@
   // 04 special section
   // ----------------------------------------------------------
 
-  section.special-section {
+  section.about-section {
     margin: 5rem 0;
 
     .contents {
@@ -539,7 +539,7 @@
   // 05 students, agents, & schools
   // ----------------------------------------------------------
 
-  section.platform-section {
+  section.platforms-section {
     width: 100%;
 
     background: lighten($theme-blue, 50);
@@ -645,7 +645,7 @@
   // 06 get started
   // ----------------------------------------------------------
 
-  section.get-started {
+  section.get-started-section {
     margin: 2rem 0;
 
     header.get-started-header {
@@ -748,7 +748,7 @@
   // 08 statistics/analysis section
   // ----------------------------------------------------------
 
-  section.milestones {
+  section.milestones-section {
     margin: 2rem auto;
 
     header.milestones-header {
@@ -810,7 +810,130 @@
   // end of statistics/analysis section
 
   // ----------------------------------------------------------
-  // 09 blog section
+  // 09 testimonials section
+  // ----------------------------------------------------------
+
+  section.testimonials-section {
+    margin: 2rem auto;
+    background: lighten($theme-blue, 50);
+
+    header.testimonials-header {
+      width: 90%;
+      margin: auto;
+
+      h1 {
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .my-slider-progress {
+      background: #ccc;
+    }
+
+    .my-slider-progress-bar {
+      background: greenyellow;
+      height: 2px;
+      transition: width 400ms ease;
+      width: 0;
+    }
+    div#testimonies-slides {
+      width: 100%;
+      display: grid;
+      place-content: center;
+
+      ul.testimonies {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2rem 5rem;
+        padding-left: 6rem;
+
+        .glide__slide {
+          flex-shrink: inherit;
+        }
+
+        @media only screen and (max-width: 850px) {
+          .glide__slide {
+            margin-left: 1rem;
+            flex-shrink: 0;
+          }
+        }
+
+        .testimony {
+          display: block;
+
+          border-radius: 0.3rem;
+          box-shadow: 8px 10px 25px #00000050;
+
+          background: #fff;
+
+          width: 90%;
+
+          .testimony-text {
+            padding: 2rem;
+            padding-bottom: 1rem;
+            border-radius: 0.3rem;
+
+            position: relative;
+
+            p {
+              z-index: 5;
+            }
+
+            img.quote-close {
+              position: absolute;
+              right: 6%;
+              bottom: -25%;
+
+              z-index: -2;
+
+              opacity: 0.5;
+            }
+          }
+          .client-deatails {
+            padding: 2rem;
+            padding-top: 1rem;
+
+            .profile-image {
+              margin-bottom: 1rem;
+
+              img {
+                width: 64px;
+                margin: auto;
+                display: block;
+              }
+            }
+
+            h4 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+              color: #777;
+
+              &.location {
+                font-size: 0.8rem;
+                color: #666;
+                font-weight: 500;
+                font-style: italic;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // end of testimonials section
+
+  // ----------------------------------------------------------
+  // 10 blog section
   // ----------------------------------------------------------
 
   section.blog-section {
@@ -969,133 +1092,10 @@
   // end of blog section
 
   // ----------------------------------------------------------
-  // 10 testimonials section
-  // ----------------------------------------------------------
-
-  section.testimonials {
-    margin: 2rem auto;
-    background: lighten($theme-blue, 50);
-
-    header.testimonials-header {
-      width: 90%;
-      margin: auto;
-
-      h1 {
-        padding: 1rem 0;
-        text-align: center;
-      }
-
-      p {
-        text-align: center;
-      }
-    }
-
-    .my-slider-progress {
-      background: #ccc;
-    }
-
-    .my-slider-progress-bar {
-      background: greenyellow;
-      height: 2px;
-      transition: width 400ms ease;
-      width: 0;
-    }
-    div#testimonies-slides {
-      width: 100%;
-      display: grid;
-      place-content: center;
-
-      ul.testimonies {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 2rem 5rem;
-        padding-left: 6rem;
-
-        .glide__slide {
-          flex-shrink: inherit;
-        }
-
-        @media only screen and (max-width: 850px) {
-          .glide__slide {
-            margin-left: 1rem;
-            flex-shrink: 0;
-          }
-        }
-
-        .testimony {
-          display: block;
-
-          border-radius: 0.3rem;
-          box-shadow: 8px 10px 25px #00000050;
-
-          background: #fff;
-
-          width: 90%;
-
-          .testimony-text {
-            padding: 2rem;
-            padding-bottom: 1rem;
-            border-radius: 0.3rem;
-
-            position: relative;
-
-            p {
-              z-index: 5;
-            }
-
-            img.quote-close {
-              position: absolute;
-              right: 6%;
-              bottom: -25%;
-
-              z-index: -2;
-
-              opacity: 0.5;
-            }
-          }
-          .client-deatails {
-            padding: 2rem;
-            padding-top: 1rem;
-
-            .profile-image {
-              margin-bottom: 1rem;
-
-              img {
-                width: 64px;
-                margin: auto;
-                display: block;
-              }
-            }
-
-            h4 {
-              text-align: center;
-            }
-            p {
-              text-align: center;
-              color: #777;
-
-              &.location {
-                font-size: 0.8rem;
-                color: #666;
-                font-weight: 500;
-                font-style: italic;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // end of testimonials section
-
-  // ----------------------------------------------------------
   // 11 contact section
   // ----------------------------------------------------------
 
-  section.contact-us {
+  section.contact-section {
     margin-top: 4rem;
 
     header.contact-section-header {

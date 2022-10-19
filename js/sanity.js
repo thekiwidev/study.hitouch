@@ -29,14 +29,36 @@ const headersArray = [
   contactHeader,
 ];
 
+// slugs
+
+// services-section         // check
+// about-section            // check
+// platforms-section        // check
+// get-started-section      // check
+// milestones-section       // check
+// testimonials-section     // check
+// blog-section             // check
+// contact-section          // check
+
 // *[_type == "your-document-type" && slugFieldName.current == "your-slug"]
 
 const fetchHeader = (sectionHeader, sectionSlug) => {
   let sectionHeaderQuery = encodeURIComponent(
-    '*[_type == "header" && slugFieldName.current == "your-slug"]'
+    `*[_type == "header" && slugFieldName.current == "${sectionSlug}"]`
   );
   let sectionHeaderUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${sectionHeaderQuery}`;
+
+  fetch(sectionHeaderUrl)
+    .then((res) => res.json())
+    .then(({ result }) => {
+      console.log(result);
+      console.log(sectionHeader);
+      console.log(sectionHeaderUrl);
+    })
+    .catch((err) => console.error(err));
 };
+
+fetchHeader(serviceHeader, "services-section");
 
 // fetch(headersUrl)
 //   .then((res) => res.json())

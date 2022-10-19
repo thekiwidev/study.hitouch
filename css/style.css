@@ -396,19 +396,19 @@ p {
 #wrapper section.services-section .services-boxes .service-box .texts h4 {
   margin-bottom: 1.4rem;
 }
-#wrapper section.special-section {
+#wrapper section.about-section {
   margin: 5rem 0;
 }
-#wrapper section.special-section .contents {
+#wrapper section.about-section .contents {
   display: flex;
   align-items: center;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.special-section .contents {
+  #wrapper section.about-section .contents {
     flex-direction: column;
   }
 }
-#wrapper section.special-section .contents .left {
+#wrapper section.about-section .contents .left {
   flex: 1;
   display: flex;
   align-items: center;
@@ -416,99 +416,99 @@ p {
   position: relative;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.special-section .contents .left {
+  #wrapper section.about-section .contents .left {
     width: 90%;
     margin: 0 auto 2rem;
   }
 }
-#wrapper section.special-section .contents .left .main-image {
+#wrapper section.about-section .contents .left .main-image {
   height: 440px;
   position: relative;
 }
-#wrapper section.special-section .contents .left img {
+#wrapper section.about-section .contents .left img {
   max-width: 350px;
   border-radius: 0.3rem;
 }
-#wrapper section.special-section .contents .left p.ratings {
+#wrapper section.about-section .contents .left p.ratings {
   position: absolute;
   left: -35%;
   top: 20%;
   font-size: 1.2rem;
   transform: rotate(90deg);
 }
-#wrapper section.special-section .contents .left .join-now {
+#wrapper section.about-section .contents .left .join-now {
   position: absolute;
   bottom: 0;
   right: 10%;
 }
-#wrapper section.special-section .contents .right {
+#wrapper section.about-section .contents .right {
   flex: 1;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.special-section .contents .right {
+  #wrapper section.about-section .contents .right {
     width: 80%;
     margin: auto;
   }
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.special-section .contents .right header.special-section-header h1 {
+  #wrapper section.about-section .contents .right header.special-section-header h1 {
     text-align: center;
   }
 }
-#wrapper section.special-section .contents .right header.special-section-header h1 span {
+#wrapper section.about-section .contents .right header.special-section-header h1 span {
   color: #00afef;
 }
-#wrapper section.special-section .contents .right header.special-section-header p {
+#wrapper section.about-section .contents .right header.special-section-header p {
   width: 60%;
   margin: 2rem 0;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.special-section .contents .right header.special-section-header p {
+  #wrapper section.about-section .contents .right header.special-section-header p {
     width: 100%;
   }
 }
-#wrapper section.platform-section {
+#wrapper section.platforms-section {
   width: 100%;
   background: #effbff;
 }
-#wrapper section.platform-section .container {
+#wrapper section.platforms-section .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 5rem 0;
 }
-#wrapper section.platform-section .container header.platform-header {
+#wrapper section.platforms-section .container header.platform-header {
   width: 90%;
   margin: 0 auto;
 }
-#wrapper section.platform-section .container header.platform-header h1 {
+#wrapper section.platforms-section .container header.platform-header h1 {
   text-align: center;
 }
-#wrapper section.platform-section .container header.platform-header p {
+#wrapper section.platforms-section .container header.platform-header p {
   text-align: center;
   margin: 1rem auto;
 }
-#wrapper section.platform-section .container #platform-slider {
+#wrapper section.platforms-section .container #platform-slider {
   width: 80%;
 }
-#wrapper section.platform-section .container #platform-slider .glide__arrow img {
+#wrapper section.platforms-section .container #platform-slider .glide__arrow img {
   width: 32px;
 }
-#wrapper section.platform-section .container #platform-slider .glide__progress__bar {
+#wrapper section.platforms-section .container #platform-slider .glide__progress__bar {
   height: 2px;
   background: #00afef;
   border-radius: 0.5rem;
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide {
+#wrapper section.platforms-section .container #platform-slider .glide__slide {
   align-self: stretch;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.platform-section .container #platform-slider .glide__slide {
+  #wrapper section.platforms-section .container #platform-slider .glide__slide {
     width: 100%;
   }
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents {
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -519,57 +519,57 @@ p {
   padding: 2rem;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.platform-section .container #platform-slider .glide__slide .contents {
+  #wrapper section.platforms-section .container #platform-slider .glide__slide .contents {
     flex-direction: column;
   }
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents .img {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents .img {
   flex: 1;
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents .img img {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents .img img {
   max-width: 350px;
   border-radius: 0.3rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.platform-section .container #platform-slider .glide__slide .contents .img img {
+  #wrapper section.platforms-section .container #platform-slider .glide__slide .contents .img img {
     max-width: 100%;
   }
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents .texts {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents .texts {
   flex: 2.3;
   color: #fff;
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents .texts a.btn:hover {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents .texts a.btn:hover {
   background: #fff;
   color: #000;
 }
-#wrapper section.platform-section .container #platform-slider .glide__slide .contents p {
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents p {
   margin: 2rem 0;
   width: 80%;
 }
-#wrapper section.get-started {
+#wrapper section.get-started-section {
   margin: 2rem 0;
 }
-#wrapper section.get-started header.get-started-header {
+#wrapper section.get-started-section header.get-started-header {
   width: 70%;
   margin: auto;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.get-started header.get-started-header {
+  #wrapper section.get-started-section header.get-started-header {
     width: 90%;
   }
 }
-#wrapper section.get-started header.get-started-header h1 {
+#wrapper section.get-started-section header.get-started-header h1 {
   text-align: center;
   line-height: 1.1;
 }
-#wrapper section.get-started header.get-started-header p {
+#wrapper section.get-started-section header.get-started-header p {
   margin: 1rem auto;
   text-align: center;
 }
-#wrapper section.get-started .categories {
+#wrapper section.get-started-section .categories {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -577,11 +577,11 @@ p {
   margin: 3rem auto;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.get-started .categories {
+  #wrapper section.get-started-section .categories {
     flex-direction: column;
   }
 }
-#wrapper section.get-started .categories .category {
+#wrapper section.get-started-section .categories .category {
   width: 400px;
   height: 250px;
   border-radius: 0.3rem;
@@ -594,31 +594,31 @@ p {
   position: relative;
   overflow: hidden;
 }
-#wrapper section.get-started .categories .category:hover {
+#wrapper section.get-started-section .categories .category:hover {
   background: rgba(0, 0, 0, 0.5019607843);
 }
-#wrapper section.get-started .categories .category img {
+#wrapper section.get-started-section .categories .category img {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: -1;
   transition: 0.3s;
 }
-#wrapper section.get-started .categories .category h3 {
+#wrapper section.get-started-section .categories .category h3 {
   text-align: center;
   color: #fff;
   margin: 1rem 0;
 }
-#wrapper section.get-started .categories .category .btn {
+#wrapper section.get-started-section .categories .category .btn {
   border: 2px solid rgba(255, 255, 255, 0.3137254902);
   color: #fff;
 }
-#wrapper section.get-started .categories .category .btn:hover {
+#wrapper section.get-started-section .categories .category .btn:hover {
   background: #fff;
   color: #000;
   border-color: #fff;
 }
-#wrapper section.get-started .categories .category .btn:hover + img {
+#wrapper section.get-started-section .categories .category .btn:hover + img {
   transform: scale(1.1);
 }
 #wrapper section.why-us {
@@ -627,26 +627,26 @@ p {
 #wrapper section.why-us .content {
   background: #00afef;
 }
-#wrapper section.milestones {
+#wrapper section.milestones-section {
   margin: 2rem auto;
 }
-#wrapper section.milestones header.milestones-header {
+#wrapper section.milestones-section header.milestones-header {
   width: 100%;
   margin: auto;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.milestones header.milestones-header {
+  #wrapper section.milestones-section header.milestones-header {
     width: 90%;
   }
 }
-#wrapper section.milestones header.milestones-header h1 {
+#wrapper section.milestones-section header.milestones-header h1 {
   text-align: center;
 }
-#wrapper section.milestones header.milestones-header p {
+#wrapper section.milestones-section header.milestones-header p {
   text-align: center;
   margin: 1rem 0;
 }
-#wrapper section.milestones .milestones-container {
+#wrapper section.milestones-section .milestones-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -654,31 +654,124 @@ p {
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.milestones .milestones-container {
+  #wrapper section.milestones-section .milestones-container {
     padding: 2rem;
   }
 }
-#wrapper section.milestones .milestones-container .milestone {
+#wrapper section.milestones-section .milestones-container .milestone {
   width: 200px;
   max-width: 350px;
   margin: 3rem 0;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.milestones .milestones-container .milestone {
+  #wrapper section.milestones-section .milestones-container .milestone {
     width: 45%;
   }
 }
-#wrapper section.milestones .milestones-container .milestone img {
+#wrapper section.milestones-section .milestones-container .milestone img {
   width: 48px;
 }
-#wrapper section.milestones .milestones-container .milestone .texts {
+#wrapper section.milestones-section .milestones-container .milestone .texts {
   margin: 1rem 0;
 }
-#wrapper section.milestones .milestones-container .milestone .texts h3 {
+#wrapper section.milestones-section .milestones-container .milestone .texts h3 {
   margin-bottom: 0.5rem;
 }
-#wrapper section.milestones .milestones-container .milestone .texts p {
+#wrapper section.milestones-section .milestones-container .milestone .texts p {
   font-size: 1.2rem;
+}
+#wrapper section.testimonials-section {
+  margin: 2rem auto;
+  background: #effbff;
+}
+#wrapper section.testimonials-section header.testimonials-header {
+  width: 90%;
+  margin: auto;
+}
+#wrapper section.testimonials-section header.testimonials-header h1 {
+  padding: 1rem 0;
+  text-align: center;
+}
+#wrapper section.testimonials-section header.testimonials-header p {
+  text-align: center;
+}
+#wrapper section.testimonials-section .my-slider-progress {
+  background: #ccc;
+}
+#wrapper section.testimonials-section .my-slider-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+#wrapper section.testimonials-section div#testimonies-slides {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5rem;
+  padding-left: 6rem;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .glide__slide {
+  flex-shrink: inherit;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.testimonials-section div#testimonies-slides ul.testimonies .glide__slide {
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony {
+  display: block;
+  border-radius: 0.3rem;
+  box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.3137254902);
+  background: #fff;
+  width: 90%;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .testimony-text {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  position: relative;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .testimony-text p {
+  z-index: 5;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .testimony-text img.quote-close {
+  position: absolute;
+  right: 6%;
+  bottom: -25%;
+  z-index: -2;
+  opacity: 0.5;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails {
+  padding: 2rem;
+  padding-top: 1rem;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image {
+  margin-bottom: 1rem;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image img {
+  width: 64px;
+  margin: auto;
+  display: block;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails h4 {
+  text-align: center;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails p {
+  text-align: center;
+  color: #777;
+}
+#wrapper section.testimonials-section div#testimonies-slides ul.testimonies .testimony .client-deatails p.location {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+  font-style: italic;
 }
 #wrapper section.blog-section {
   margin: 2rem 0;
@@ -805,151 +898,58 @@ p {
   width: -moz-max-content;
   width: max-content;
 }
-#wrapper section.testimonials {
-  margin: 2rem auto;
-  background: #effbff;
-}
-#wrapper section.testimonials header.testimonials-header {
-  width: 90%;
-  margin: auto;
-}
-#wrapper section.testimonials header.testimonials-header h1 {
-  padding: 1rem 0;
-  text-align: center;
-}
-#wrapper section.testimonials header.testimonials-header p {
-  text-align: center;
-}
-#wrapper section.testimonials .my-slider-progress {
-  background: #ccc;
-}
-#wrapper section.testimonials .my-slider-progress-bar {
-  background: greenyellow;
-  height: 2px;
-  transition: width 400ms ease;
-  width: 0;
-}
-#wrapper section.testimonials div#testimonies-slides {
-  width: 100%;
-  display: grid;
-  place-content: center;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 5rem;
-  padding-left: 6rem;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .glide__slide {
-  flex-shrink: inherit;
-}
-@media only screen and (max-width: 850px) {
-  #wrapper section.testimonials div#testimonies-slides ul.testimonies .glide__slide {
-    margin-left: 1rem;
-    flex-shrink: 0;
-  }
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony {
-  display: block;
-  border-radius: 0.3rem;
-  box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.3137254902);
-  background: #fff;
-  width: 90%;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text {
-  padding: 2rem;
-  padding-bottom: 1rem;
-  border-radius: 0.3rem;
-  position: relative;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text p {
-  z-index: 5;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .testimony-text img.quote-close {
-  position: absolute;
-  right: 6%;
-  bottom: -25%;
-  z-index: -2;
-  opacity: 0.5;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails {
-  padding: 2rem;
-  padding-top: 1rem;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image {
-  margin-bottom: 1rem;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails .profile-image img {
-  width: 64px;
-  margin: auto;
-  display: block;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails h4 {
-  text-align: center;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails p {
-  text-align: center;
-  color: #777;
-}
-#wrapper section.testimonials div#testimonies-slides ul.testimonies .testimony .client-deatails p.location {
-  font-size: 0.8rem;
-  color: #666;
-  font-weight: 500;
-  font-style: italic;
-}
-#wrapper section.contact-us {
+#wrapper section.contact-section {
   margin-top: 4rem;
 }
-#wrapper section.contact-us header.contact-section-header {
+#wrapper section.contact-section header.contact-section-header {
   text-align: center;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.contact-us header.contact-section-header {
+  #wrapper section.contact-section header.contact-section-header {
     width: 90%;
     margin: auto;
   }
 }
-#wrapper section.contact-us header.contact-section-header h1 {
+#wrapper section.contact-section header.contact-section-header h1 {
   line-height: 1;
   margin-bottom: 1rem;
 }
-#wrapper section.contact-us .content {
+#wrapper section.contact-section .content {
   display: flex;
   padding: 2rem 0;
   align-items: center;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.contact-us .content {
+  #wrapper section.contact-section .content {
     flex-direction: column;
   }
 }
-#wrapper section.contact-us .content .left-segment {
+#wrapper section.contact-section .content .left-segment {
   width: 50%;
   margin: auto;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.contact-us .content .left-segment {
+  #wrapper section.contact-section .content .left-segment {
     width: 100%;
     margin: auto;
   }
 }
-#wrapper section.contact-us .content .left-segment form h3 {
+#wrapper section.contact-section .content .left-segment form h3 {
   margin-bottom: 2.5rem;
   padding: 0 5%;
 }
-#wrapper section.contact-us .content .left-segment form .input {
+#wrapper section.contact-section .content .left-segment form .input {
   width: 100%;
 }
-#wrapper section.contact-us .content .left-segment form .input label {
+#wrapper section.contact-section .content .left-segment form .input label {
   font-size: 1.2rem;
   display: block;
   margin-bottom: 0.5rem;
   margin-left: 5%;
 }
-#wrapper section.contact-us .content .left-segment form .input input,
-#wrapper section.contact-us .content .left-segment form .input textarea,
-#wrapper section.contact-us .content .left-segment form .input select {
+#wrapper section.contact-section .content .left-segment form .input input,
+#wrapper section.contact-section .content .left-segment form .input textarea,
+#wrapper section.contact-section .content .left-segment form .input select {
   display: block;
   width: 90%;
   margin: auto;
@@ -961,46 +961,46 @@ p {
   font-size: 1rem;
   resize: none;
 }
-#wrapper section.contact-us .content .left-segment form .input input:focus,
-#wrapper section.contact-us .content .left-segment form .input textarea:focus,
-#wrapper section.contact-us .content .left-segment form .input select:focus {
+#wrapper section.contact-section .content .left-segment form .input input:focus,
+#wrapper section.contact-section .content .left-segment form .input textarea:focus,
+#wrapper section.contact-section .content .left-segment form .input select:focus {
   background: #effbff;
 }
-#wrapper section.contact-us .content .left-segment form .input.name input {
+#wrapper section.contact-section .content .left-segment form .input.name input {
   text-transform: capitalize;
 }
-#wrapper section.contact-us .content .left-segment form .input.message textarea {
+#wrapper section.contact-section .content .left-segment form .input.message textarea {
   height: 150px;
 }
-#wrapper section.contact-us .content .left-segment form button.btn-form {
+#wrapper section.contact-section .content .left-segment form button.btn-form {
   display: block;
   width: 90%;
   margin: auto;
   text-transform: uppercase;
   border: 2px solid #00afef;
 }
-#wrapper section.contact-us .content .left-segment form button.btn-form:hover {
+#wrapper section.contact-section .content .left-segment form button.btn-form:hover {
   border: 2px solid #00afef;
 }
-#wrapper section.contact-us .content .right-segment {
+#wrapper section.contact-section .content .right-segment {
   width: 50%;
   height: 100%;
   border-left: 1px solid #e0dada;
   padding: 5rem 2rem;
 }
 @media only screen and (max-width: 851px) {
-  #wrapper section.contact-us .content .right-segment {
+  #wrapper section.contact-section .content .right-segment {
     width: 100%;
     margin: auto;
     border: none;
   }
 }
-#wrapper section.contact-us .content .right-segment h2 {
+#wrapper section.contact-section .content .right-segment h2 {
   text-align: center;
   margin-bottom: 2rem;
   text-transform: capitalize;
 }
-#wrapper section.contact-us .content .right-segment li.glide__slide {
+#wrapper section.contact-section .content .right-segment li.glide__slide {
   background: #effbff;
   border-radius: 1rem;
   padding: 2rem;
@@ -1009,12 +1009,12 @@ p {
   align-items: center;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.contact-us .content .right-segment li.glide__slide img {
+  #wrapper section.contact-section .content .right-segment li.glide__slide img {
     width: 64px;
     margin-right: 1rem;
   }
 }
-#wrapper section.contact-us .content .right-segment li.glide__slide h4 {
+#wrapper section.contact-section .content .right-segment li.glide__slide h4 {
   text-align: center;
   font-weight: 500;
 }
