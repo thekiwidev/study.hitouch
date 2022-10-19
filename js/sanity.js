@@ -10,7 +10,7 @@ const headersUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/$
 // get all header tags
 
 const serviceHeader = document.querySelector("header.services-header");
-const aboutHeader = document.querySelector("header.special-section-header");
+const aboutHeader = document.querySelector("header.about-section-header");
 const platformHeader = document.querySelector("header.platform-header");
 const getStartedHeader = document.querySelector("header.get-started-header");
 const milestonesHeader = document.querySelector("header.milestones-header");
@@ -19,14 +19,38 @@ const blogHeader = document.querySelector("header.blog-section-header");
 const contactHeader = document.querySelector("header.contact-section-header");
 
 const headersArray = [
-  serviceHeader,
-  aboutHeader,
-  platformHeader,
-  getStartedHeader,
-  milestonesHeader,
-  testimonialsHeader,
-  blogHeader,
-  contactHeader,
+  {
+    headerTitle: serviceHeader,
+    headerSlug: "services-section",
+  },
+  {
+    headerTitle: aboutHeader,
+    headerSlug: "about-section",
+  },
+  {
+    headerTitle: platformHeader,
+    headerSlug: "platforms-section",
+  },
+  {
+    headerTitle: getStartedHeader,
+    headerSlug: "get-started-section",
+  },
+  {
+    headerTitle: milestonesHeader,
+    headerSlug: "milestones-section",
+  },
+  {
+    headerTitle: testimonialsHeader,
+    headerSlug: "testimonials-section",
+  },
+  {
+    headerTitle: blogHeader,
+    headerSlug: "blog-section",
+  },
+  {
+    headerTitle: contactHeader,
+    headerSlug: "contact-section",
+  },
 ];
 
 // slugs
@@ -44,32 +68,31 @@ const headersArray = [
 
 const fetchHeader = (sectionHeader, sectionSlug) => {
   let sectionHeaderQuery = encodeURIComponent(
-    `*[_type == "header" && slugFieldName.current == "${sectionSlug}"]`
+    `*[_type == "header" && slug.current == "${sectionSlug}"]`
   );
   let sectionHeaderUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${sectionHeaderQuery}`;
 
   fetch(sectionHeaderUrl)
     .then((res) => res.json())
     .then(({ result }) => {
-      console.log(result);
-      console.log(sectionHeader);
-      console.log(sectionHeaderUrl);
+      // get the heading and the subheading
+      let { mainheading, subheading } = result[0];
+
+      // append then with template strings to the sectionHeader
+      sectionHeader.innerHTML = `
+      <h1>${mainheading}</h1>
+      <p>${subheading}</p>
+      `;
+      // console.log(mainheading, subheading);
+      // console.log(sectionHeader);
     })
     .catch((err) => console.error(err));
 };
 
-fetchHeader(serviceHeader, "services-section");
-
-// fetch(headersUrl)
-//   .then((res) => res.json())
-//   .then(({ result }) => {
-//     result.forEach((header) => {
-//       const { slug } = header;
-
-//       console.log(slug.current);
-//     });
-//   })
-//   .catch((err) => console.error(err));
+headersArray.forEach((header) => {
+  let { headerTitle, headerSlug } = header;
+  fetchHeader(headerTitle, headerSlug);
+});
 
 // -------------------------------------------------------
 // Fetch services
