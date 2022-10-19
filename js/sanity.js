@@ -4,8 +4,50 @@ const DATASET = "production";
 // -------------------------------------------------------
 // Fetch Headers
 // -------------------------------------------------------
-const headersQuery = encodeURIComponent('*[_type == "service"]');
+const headersQuery = encodeURIComponent('*[_type == "header"]');
 const headersUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${headersQuery}`;
+
+// get all header tags
+
+const serviceHeader = document.querySelector("header.services-header");
+const aboutHeader = document.querySelector("header.special-section-header");
+const platformHeader = document.querySelector("header.platform-header");
+const getStartedHeader = document.querySelector("header.get-started-header");
+const milestonesHeader = document.querySelector("header.milestones-header");
+const testimonialsHeader = document.querySelector("header.testimonials-header");
+const blogHeader = document.querySelector("header.blog-section-header");
+const contactHeader = document.querySelector("header.contact-section-header");
+
+const headersArray = [
+  serviceHeader,
+  aboutHeader,
+  platformHeader,
+  getStartedHeader,
+  milestonesHeader,
+  testimonialsHeader,
+  blogHeader,
+  contactHeader,
+];
+
+// *[_type == "your-document-type" && slugFieldName.current == "your-slug"]
+
+const fetchHeader = (sectionHeader, sectionSlug) => {
+  let sectionHeaderQuery = encodeURIComponent(
+    '*[_type == "header" && slugFieldName.current == "your-slug"]'
+  );
+  let sectionHeaderUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${sectionHeaderQuery}`;
+};
+
+// fetch(headersUrl)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
+//     result.forEach((header) => {
+//       const { slug } = header;
+
+//       console.log(slug.current);
+//     });
+//   })
+//   .catch((err) => console.error(err));
 
 // -------------------------------------------------------
 // Fetch services
@@ -38,7 +80,6 @@ fetch(servicesUrl)
       `;
 
       servicesContainer.appendChild(serviceCard);
-      console.log(slug.current);
     });
   })
   .catch((err) => console.error(err));
