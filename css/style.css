@@ -492,6 +492,11 @@ p {
 #wrapper section.platforms-section .container #platform-slider {
   width: 80%;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.platforms-section .container #platform-slider {
+    width: 100%;
+  }
+}
 #wrapper section.platforms-section .container #platform-slider .glide__arrow img {
   width: 32px;
 }
@@ -517,6 +522,11 @@ p {
   background: #00afef;
   border-radius: 0.5rem;
   padding: 2rem;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.platforms-section .container #platform-slider .glide__slide .contents {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 850px) {
   #wrapper section.platforms-section .container #platform-slider .glide__slide .contents {
