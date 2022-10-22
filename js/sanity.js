@@ -4,8 +4,6 @@ const DATASET = "production";
 // -------------------------------------------------------
 // Fetch Headers
 // -------------------------------------------------------
-const headersQuery = encodeURIComponent('*[_type == "header"]');
-const headersUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${headersQuery}`;
 
 // get all header tags
 
@@ -53,20 +51,11 @@ const headersArray = [
   },
 ];
 
-// slugs
-
-// services-section         // check
-// about-section            // check
-// platforms-section        // check
-// get-started-section      // check
-// milestones-section       // check
-// testimonials-section     // check
-// blog-section             // check
-// contact-section          // check
-
-// *[_type == "your-document-type" && slugFieldName.current == "your-slug"]
+// funtion to fetch each header's content
 
 const fetchHeader = (sectionHeader, sectionSlug) => {
+  // selection each header with their slugs
+
   let sectionHeaderQuery = encodeURIComponent(
     `*[_type == "header" && slug.current == "${sectionSlug}"]`
   );
@@ -83,8 +72,6 @@ const fetchHeader = (sectionHeader, sectionSlug) => {
       <h1>${mainheading}</h1>
       <p>${subheading}</p>
       `;
-      // console.log(mainheading, subheading);
-      // console.log(sectionHeader);
     })
     .catch((err) => console.error(err));
 };

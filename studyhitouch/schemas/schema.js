@@ -8,6 +8,7 @@ import testimonials from "./testimonials"; // import the file you just made
 import service from "./services"; // import the file you just made
 import headers from "./headers";
 import banners from "./banners";
+import images from "./images";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,5 +24,6 @@ export default createSchema({
     service, // {icon, title, description, url}
     headers, // {main-heading, subheading}
     banners, // {}
+    images,
   ]),
 });
