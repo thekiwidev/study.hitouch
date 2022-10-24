@@ -91,26 +91,54 @@ const servicesUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/
 // tags
 const servicesContainer = document.querySelector(".services-boxes");
 
+// initial services request
 fetch(servicesUrl)
   .then((res) => res.json())
   .then(({ result }) => {
     result.forEach((review) => {
-      let { title, icon, description, url, slug } = review;
+      // get all the fields
+      let { title, icon, description, slug } = review;
 
-      // create a div with the class of "service-box"
+      // define an empty icon URL
+      let iconUrl;
+
+      // create an HTML Element and assign it a class
       let serviceCard = document.createElement("div");
       serviceCard.setAttribute("class", `service-box ${slug.current}`);
 
-      serviceCard.innerHTML = `
-      <div class="icon">
-        <img src="./assets/icons/graduation.png" alt="graduation" />
-      </div>
-      <div class="texts">
-        <h4>${title}</h4>
-        <p>${description}</p>
-      </div>
-      `;
+      // preparing for the icons request
+      // get the icon id => "_ref"
+      const iconId = icon.asset._ref;
 
+      // create a query for the icon
+      const iconQuery = encodeURIComponent(`*[_id == "${iconId}"]`);
+
+      // fetch individial icons
+      fetch(
+        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${iconQuery}`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          // get the url from each icons
+          const { url } = result.result[0];
+
+          // assign the url to the empty defined variable
+          iconUrl = url;
+
+          // put HTML in the service card via template string
+          serviceCard.innerHTML = `
+            <div class="icon">
+              <img src="${iconUrl}" alt="graduation" />
+            </div>
+            <div class="texts">
+              <h4>${title}</h4>
+              <p>${description}</p>
+            </div>
+            `;
+        })
+        .catch((err) => console.error(err));
+
+      // append the service card to the cervice container
       servicesContainer.appendChild(serviceCard);
     });
   })
