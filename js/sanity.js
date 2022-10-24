@@ -115,3 +115,44 @@ fetch(servicesUrl)
     });
   })
   .catch((err) => console.error(err));
+
+// ----------------------------------------------------------
+// GET MEDIAS {IMAGES}
+// ----------------------------------------------------------
+
+const aboutImageQuery = encodeURIComponent('*[_type == "images"]');
+const aboutImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${aboutImageQuery}`;
+const aboutImageTag = document.querySelector(
+  ".about-section .contents .left .main-image img"
+);
+
+// Initial request to get the document
+
+fetch(aboutImageUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    result.forEach((img) => {
+      // get the image and the alt-text
+      const { alttext, image } = img;
+
+      // make a new request for the image id => "_ref"
+      // select the image id => "_ref"
+      let imgId = image.asset._ref;
+
+      // create a query for the image using the image id = "_ref"
+      let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+
+      // fetch the image itself & grab the url to the image
+      fetch(
+        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          const { url } = result.result[0];
+          aboutImageTag.setAttribute("src", url);
+          aboutImageTag.setAttribute("alt", alttext);
+        })
+        .catch((err) => console.error(err));
+    });
+  })
+  .catch((err) => console.error(err));

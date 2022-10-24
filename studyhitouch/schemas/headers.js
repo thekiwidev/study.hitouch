@@ -23,7 +23,7 @@ export default {
       type: "slug",
       title: "Slug",
       options: {
-        source: "section",
+        source: `${"section"}-section`,
       },
     },
   ],
