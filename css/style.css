@@ -64,11 +64,16 @@ p {
 }
 
 #wrapper section.introduction-section .introduction-section-content {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.introduction-section .introduction-section-content {
+    flex-direction: column-reverse;
+  }
 }
 #wrapper section.introduction-section .introduction-section-content header.introduction-section-header {
   flex: 1;
@@ -76,25 +81,46 @@ p {
 #wrapper section.introduction-section .introduction-section-content header.introduction-section-header h1 {
   width: 75%;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.introduction-section .introduction-section-content header.introduction-section-header h1 {
+    width: 100%;
+  }
+}
 #wrapper section.introduction-section .introduction-section-content header.introduction-section-header p {
   margin: 1.5rem 0;
   width: 70%;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.introduction-section .introduction-section-content header.introduction-section-header p {
+    width: 100%;
+  }
+}
 #wrapper section.introduction-section .introduction-section-content .introduction-section-media {
   width: 45%;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.introduction-section .introduction-section-content .introduction-section-media {
+    width: 100%;
+  }
 }
 #wrapper section.introduction-section .introduction-section-content .introduction-section-media img {
   width: 100%;
 }
 #wrapper section.keypoints-section {
   background: #effbff;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 #wrapper section.keypoints-section .keypoints-section-contents {
   width: 90%;
   margin: auto;
   display: flex;
   gap: 3rem;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.keypoints-section .keypoints-section-contents {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 #wrapper section.keypoints-section .keypoints-section-contents .keypoint {
   display: flex;
@@ -114,7 +140,7 @@ p {
   font-size: 0.8rem;
 }
 #wrapper section.why-us-section {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 #wrapper section.why-us-section .why-us-section-content {
   display: flex;
@@ -125,6 +151,9 @@ p {
 #wrapper section.why-us-section .why-us-section-content .why-us-section-header {
   margin: 0 0 1rem 0;
 }
+#wrapper section.why-us-section .why-us-section-content .why-us-section-media img {
+  width: 100%;
+}
 #wrapper section.why-us-section .why-us-section-content .why-us-section-features {
   width: 100%;
   margin-top: 2rem;
@@ -134,11 +163,21 @@ p {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.why-us-section .why-us-section-content .why-us-section-features {
+    flex-direction: column;
+  }
+}
 #wrapper section.why-us-section .why-us-section-content .why-us-section-features .feature {
   width: 30%;
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.why-us-section .why-us-section-content .why-us-section-features .feature {
+    width: 100%;
+  }
 }
 #wrapper section.why-us-section .why-us-section-content .why-us-section-features .feature h3 {
   font-size: 1.3rem;
@@ -149,7 +188,7 @@ p {
   font-size: 0.8rem;
 }
 #wrapper section.call-to-action-banner {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   display: grid;
   place-content: center;
 }
@@ -162,8 +201,20 @@ p {
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 850px) {
+  #wrapper section.call-to-action-banner .call-to-action-banner-content {
+    flex-direction: column;
+    padding: 3rem;
+    margin: auto;
+  }
+}
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text {
   flex: 6;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.call-to-action-banner .call-to-action-banner-content .text {
+    width: 100%;
+  }
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text h3,
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text h5 {
@@ -175,6 +226,11 @@ p {
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text h3 {
   width: 80%;
+}
+@media only screen and (max-width: 850px) {
+  #wrapper section.call-to-action-banner .call-to-action-banner-content .text h3 {
+    width: 100%;
+  }
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .cta {
   flex: 2;

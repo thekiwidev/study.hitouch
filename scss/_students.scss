@@ -4,26 +4,43 @@
   // ----------------------------------------------------------
   section.introduction-section {
     .introduction-section-content {
-      padding: 2rem 0;
+      padding: 2rem 1rem;
 
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 2rem;
 
+      @media only screen and (max-width: 850px) {
+        flex-direction: column-reverse;
+      }
+
       header.introduction-section-header {
         flex: 1;
 
         h1 {
           width: 75%;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
         }
+
         p {
           margin: 1.5rem 0;
           width: 70%;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
         }
       }
       .introduction-section-media {
         width: 45%;
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+        }
 
         img {
           width: 100%;
@@ -40,7 +57,7 @@
 
   section.keypoints-section {
     background: lighten($theme-blue, 50);
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 
     .keypoints-section-contents {
       width: 90%;
@@ -48,6 +65,11 @@
 
       display: flex;
       gap: 3rem;
+
+      @media only screen and (max-width: 850px) {
+        width: 100%;
+        flex-direction: column;
+      }
 
       .keypoint {
         display: flex;
@@ -81,7 +103,7 @@
   // ----------------------------------------------------------
 
   section.why-us-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 
     .why-us-section-content {
       display: flex;
@@ -91,6 +113,11 @@
 
       .why-us-section-header {
         margin: 0 0 1rem 0;
+      }
+      .why-us-section-media {
+        img {
+          width: 100%;
+        }
       }
 
       .why-us-section-features {
@@ -103,12 +130,20 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: 850px) {
+          flex-direction: column;
+        }
+
         .feature {
           width: 30%;
 
           display: flex;
           align-items: center;
           gap: 0.8rem;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
 
           h3 {
             font-size: 1.3rem;
@@ -132,7 +167,7 @@
   // ----------------------------------------------------------
 
   section.call-to-action-banner {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 
     display: grid;
     place-content: center;
@@ -149,8 +184,18 @@
       justify-content: center;
       gap: 2rem;
 
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+        padding: 3rem;
+        margin: auto;
+      }
+
       .text {
         flex: 6;
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+        }
 
         h3,
         h5 {
@@ -162,6 +207,10 @@
         }
         h3 {
           width: 80%;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
         }
       }
       .cta {
