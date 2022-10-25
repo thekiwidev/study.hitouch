@@ -173,4 +173,49 @@
       }
     }
   }
+
+  //   end of call to action banner
+
+  // ----------------------------------------------------------
+  // 07 how it works
+  // ----------------------------------------------------------
+
+  .how-it-works-section {
+    padding: 2rem 0;
+
+    .how-it-works-section-content {
+      .how-it-works-section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .steps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .step {
+          width: 300px;
+          text-align: center;
+
+          h5 {
+            color: $theme-blue;
+          }
+        }
+      }
+      .btn {
+        display: block;
+        margin: 3rem auto;
+
+        width: max-content;
+
+        &:hover {
+          background: lighten($theme-blue, 40);
+        }
+      }
+    }
+  }
+
+  //   end of how it works
 }
