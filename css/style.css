@@ -18,6 +18,7 @@
 }
 * {
   font-family: themeFont;
+  color: #373435;
 }
 
 h1 {
@@ -154,7 +155,6 @@ p {
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content {
   background: #00afef;
-  color: #fff;
   padding: 3rem;
   border-radius: 0.5rem;
   display: flex;
@@ -168,6 +168,7 @@ p {
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text h5 {
   line-height: 1;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .cta {
   flex: 2;
