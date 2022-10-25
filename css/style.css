@@ -155,20 +155,26 @@ p {
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content {
   background: #00afef;
-  padding: 3rem;
+  padding: 6rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text {
-  flex: 9;
+  flex: 6;
 }
-#wrapper section.call-to-action-banner .call-to-action-banner-content .text h1,
+#wrapper section.call-to-action-banner .call-to-action-banner-content .text h3,
 #wrapper section.call-to-action-banner .call-to-action-banner-content .text h5 {
   line-height: 1;
-  margin-bottom: 0.5rem;
   color: #fff;
+}
+#wrapper section.call-to-action-banner .call-to-action-banner-content .text h5 {
+  margin-bottom: 1rem;
+}
+#wrapper section.call-to-action-banner .call-to-action-banner-content .text h3 {
+  width: 80%;
 }
 #wrapper section.call-to-action-banner .call-to-action-banner-content .cta {
   flex: 2;
@@ -546,6 +552,10 @@ p {
 }
 #wrapper section.services-section .services-boxes .service-box .texts h4 {
   margin-bottom: 1.4rem;
+  color: #fff;
+}
+#wrapper section.services-section .services-boxes .service-box .texts p {
+  color: #fff;
 }
 #wrapper section.about-section {
   margin: 5rem 0;
@@ -701,9 +711,13 @@ p {
   background: #fff;
   color: #000;
 }
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents h2 {
+  color: #fff;
+}
 #wrapper section.platforms-section .container #platform-slider .glide__slide .contents p {
   margin: 2rem 0;
   width: 80%;
+  color: #fff;
 }
 #wrapper section.get-started-section {
   margin: 2rem 0;

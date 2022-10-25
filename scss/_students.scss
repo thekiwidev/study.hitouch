@@ -140,22 +140,28 @@
     .call-to-action-banner-content {
       background: $theme-blue;
 
-      padding: 3rem;
+      padding: 6rem;
 
       border-radius: 0.5rem;
 
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 2rem;
 
       .text {
-        flex: 9;
+        flex: 6;
 
-        h1,
+        h3,
         h5 {
           line-height: 1;
-          margin-bottom: 0.5rem;
           color: #fff;
+        }
+        h5 {
+          margin-bottom: 1rem;
+        }
+        h3 {
+          width: 80%;
         }
       }
       .cta {
