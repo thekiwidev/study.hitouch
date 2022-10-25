@@ -1218,6 +1218,7 @@ p {
 }
 #wrapper footer.main-footer .container .footer-top .company p {
   margin: 1.4rem 0;
+  color: #fff;
 }
 #wrapper footer.main-footer .container .footer-top .company .social-icons {
   display: flex;
@@ -1264,6 +1265,7 @@ p {
 #wrapper footer.main-footer .container .footer-top .newsletter h2.header {
   font-size: 1.8rem;
   margin-bottom: 2.5rem;
+  color: #fff;
 }
 #wrapper footer.main-footer .container .footer-top .immigration .links a,
 #wrapper footer.main-footer .container .footer-top .quick-links .links a,
@@ -1282,6 +1284,9 @@ p {
 }
 #wrapper footer.main-footer .container .footer-top .newsletter {
   flex: 1.8;
+}
+#wrapper footer.main-footer .container .footer-top .newsletter p {
+  color: #fff;
 }
 #wrapper footer.main-footer .container .footer-top .newsletter form {
   display: flex;
@@ -1329,6 +1334,7 @@ p {
 #wrapper footer.main-footer .container .copyright {
   text-align: center;
   font-size: 1.2rem;
+  color: #fff;
 }
 @media only screen and (max-width: 850px) {
   #wrapper footer.main-footer .container .copyright {

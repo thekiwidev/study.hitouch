@@ -1303,6 +1303,7 @@
 
           p {
             margin: 1.4rem 0;
+            color: #fff;
           }
 
           .social-icons {
@@ -1362,6 +1363,7 @@
           h2.header {
             font-size: 1.8rem;
             margin-bottom: 2.5rem;
+            color: #fff;
           }
 
           .links {
@@ -1383,6 +1385,10 @@
         }
         .newsletter {
           flex: 1.8;
+
+          p {
+            color: #fff;
+          }
 
           form {
             display: flex;
@@ -1445,6 +1451,8 @@
       .copyright {
         text-align: center;
         font-size: 1.2rem;
+
+        color: #fff;
 
         @media only screen and (max-width: 850px) {
           font-size: 1rem;
