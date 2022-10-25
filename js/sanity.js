@@ -91,6 +91,12 @@ const servicesUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/
 // tags
 const servicesContainer = document.querySelector(".services-boxes");
 
+// the truncate function
+const truncate = (string, number) => {
+  const newText = string.substring(0, number);
+  return newText;
+};
+
 // initial services request
 fetch(servicesUrl)
   .then((res) => res.json())
@@ -98,6 +104,8 @@ fetch(servicesUrl)
     result.forEach((review) => {
       // get all the fields
       let { title, icon, description, slug } = review;
+      // let truncatedDescription = truncate(description, 200);
+      // console.log(description, truncatedDescription);
 
       // define an empty icon URL
       let iconUrl;
@@ -132,7 +140,7 @@ fetch(servicesUrl)
             </div>
             <div class="texts">
               <h4>${title}</h4>
-              <p>${description}</p>
+              <p>${truncate(description, 120)}...</p>
             </div>
             `;
         })
