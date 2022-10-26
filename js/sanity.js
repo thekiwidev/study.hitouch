@@ -272,40 +272,28 @@ fetch(studenstIntroductionSectionImageUrl)
 const keyPointsContainer = document.querySelector(
   ".keypoints-section-contents"
 );
+
+const keypointsTags = document.querySelectorAll(".keypoint");
 const keyPointsQuery = encodeURIComponent('*[_type == "keypoint"]');
 const keyPointsUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${keyPointsQuery}`;
 
-fetch(keyPointsUrl)
-  .then((res) => res.json())
-  .then(({ result }) => {
-    let keypointTag = document.createElement("div");
-    keypointTag.setAttribute("class", "keypoint");
+keypointsTags.forEach((keypointTag) => {
+  fetch(keyPointsUrl)
+    .then((res) => res.json())
+    .then(({ result }) => {
+      result.find((keypoint) => {
+        const { heading, description, point, image, slug } = keypoint;
+        const imgId = image.asset._ref;
+        const imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+        const imgUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`;
 
-    result.forEach((keypoint) => {
-      // -------------------------------------------------------
-      // create an HTML tag for each keypoint and assign a class
+        fetch(imgUrl)
+          .then((res) => res.json())
+          .then(({ result }) => {
+            const { url } = result[0];
 
-      let keypointTag = document.createElement("div");
-      keypointTag.setAttribute("class", "keypoint");
-
-      // -------------------------------------------------------
-      // get the { point, heading, & description } and the image
-
-      const { point, heading, description, image, slug } = keypoint;
-
-      // -------------------------------------------------------
-      // make a new request for the image.
-
-      const iconId = image.asset._ref;
-      const iconQuery = encodeURIComponent(`*[_id == "${iconId}"]`);
-      const iconUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${iconQuery}`;
-
-      fetch(iconUrl)
-        .then((res) => res.json())
-        .then((result) => {
-          const { url } = result.result[0];
-
-          keypointTag.innerHTML = `
+            if (keypointTag.classList.contains(keypoint.slug.current)) {
+              keypointTag.innerHTML = `
              <img
                 src="${url}"
                 alt="${slug.current}"
@@ -318,10 +306,62 @@ fetch(keyPointsUrl)
                 </p>
               </div>
           `;
+            }
+          });
+      });
+    })
+    .catch((err) => console.error(err));
+});
 
-          keyPointsContainer.appendChild(keypointTag);
-        })
-        .catch((err) => console.error(err));
-    });
-  })
-  .catch((err) => console.error(err));
+// fetch(keyPointsUrl)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
+//     // get the keypoint that match the class of the keypoint and insert it
+
+//     // let keypointTag = document.createElement("div");
+//     // keypointTag.setAttribute("class", "keypoint");
+
+//     result.forEach((keypoint) => {
+//       // -------------------------------------------------------
+//       // create an HTML tag for each keypoint and assign a class
+
+//       let keypointTag = document.createElement("div");
+//       keypointTag.setAttribute("class", "keypoint");
+
+//       // -------------------------------------------------------
+//       // get the { point, heading, & description } and the image
+
+//       const { point, heading, description, image, slug } = keypoint;
+
+//       // -------------------------------------------------------
+//       // make a new request for the image.
+
+//       const iconId = image.asset._ref;
+//       const iconQuery = encodeURIComponent(`*[_id == "${iconId}"]`);
+//       const iconUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${iconQuery}`;
+
+//       fetch(iconUrl)
+//         .then((res) => res.json())
+//         .then((result) => {
+//           const { url } = result.result[0];
+
+//           keypointTag.innerHTML = `
+//              <img
+//                 src="${url}"
+//                 alt="${slug.current}"
+//               />
+//               <div class="text">
+//                 <h5>${point}</h5>
+//                 <h3>${heading}</h3>
+//                 <p>
+//                   ${description}
+//                 </p>
+//               </div>
+//           `;
+
+//           // keyPointsContainer.appendChild(keypointTag);
+//         })
+//         .catch((err) => console.error(err));
+//     });
+//   })
+//   .catch((err) => console.error(err));
