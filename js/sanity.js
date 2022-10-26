@@ -15,12 +15,14 @@ const milestonesHeader = document.querySelector("header.milestones-header");
 const testimonialsHeader = document.querySelector("header.testimonials-header");
 const blogHeader = document.querySelector("header.blog-section-header");
 const contactHeader = document.querySelector("header.contact-section-header");
-const studentsWhyUsHeader = document.querySelector(".why-us-section-header");
 const studentsIntroductionHeader = document.querySelector(
-  ".introduction-section-header"
+  "header.introduction-section-header"
+);
+const studentsWhyUsHeader = document.querySelector(
+  "header.why-us-section-header"
 );
 const studentsHowItWorksHeader = document.querySelector(
-  ".how-it-works-section-header"
+  "header.how-it-works-section-header"
 );
 
 const headersArray = [
@@ -181,9 +183,52 @@ const aboutImageTag = document.querySelector(
   ".about-section .contents .left .main-image img"
 );
 
+// ------------------------------------------------
+// Fetch Homepage About Section Image
+
 // Initial request to get the document
 
 fetch(aboutImageUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    result.forEach((img) => {
+      // get the image and the alt-text
+      const { alttext, image } = img;
+
+      // make a new request for the image id => "_ref"
+      // select the image id => "_ref"
+      let imgId = image.asset._ref;
+
+      // create a query for the image using the image id = "_ref"
+      let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+
+      // fetch the image itself & grab the url to the image
+      fetch(
+        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          const { url } = result.result[0];
+          studenstIntroductionSectionImageTag.setAttribute("src", url);
+          studenstIntroductionSectionImageTag.setAttribute("alt", alttext);
+        })
+        .catch((err) => console.error(err));
+    });
+  })
+  .catch((err) => console.error(err));
+
+// ------------------------------------------------
+// Fetch Students Introduction Section Image
+
+const studenstIntroductionSectionImageQuery = encodeURIComponent(
+  '*[_type == "images"]'
+);
+const studenstIntroductionSectionImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${studenstIntroductionSectionImageQuery}`;
+const studenstIntroductionSectionImageTag = document.querySelector(
+  ".introduction-section .introduction-section-content .introduction-section-media img"
+);
+
+fetch(studenstIntroductionSectionImageUrl)
   .then((res) => res.json())
   .then(({ result }) => {
     result.forEach((img) => {

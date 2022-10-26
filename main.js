@@ -80,10 +80,10 @@ new Glide("#contact-slides", {
 // Truncating Texts
 // ---------------------------------------------
 
-const truncate = (string, number) => {
-  const newText = string.substring(0, number);
-  return newText;
-};
+// const truncate = (string, number) => {
+//   const newText = string.substring(0, number);
+//   return newText;
+// };
 
 // truncate testimonies
 // let testimoniesTexts = document.querySelectorAll(".testimony-text p");
