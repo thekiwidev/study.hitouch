@@ -80,6 +80,11 @@
 
         flex: 1;
 
+        img {
+          width: 100px;
+          object-fit: contain;
+        }
+
         h5 {
           font-size: 0.7rem;
           font-weight: 300;

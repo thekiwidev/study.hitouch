@@ -9,6 +9,7 @@ import service from "./services"; // import the file you just made
 import headers from "./headers";
 import banners from "./banners";
 import images from "./images";
+import studentsKeypoints from "./students.keypoints";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,5 +26,6 @@ export default createSchema({
     headers, // {main-heading, subheading}
     banners, // {}
     images,
+    studentsKeypoints,
   ]),
 });

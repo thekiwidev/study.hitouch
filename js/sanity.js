@@ -173,22 +173,70 @@ fetch(servicesUrl)
   })
   .catch((err) => console.error(err));
 
-// ----------------------------------------------------------
+// ============================================================
 // GET MEDIAS {IMAGES}
-// ----------------------------------------------------------
+// ============================================================
 
-const aboutImageQuery = encodeURIComponent('*[_type == "images"]');
+const aboutImageQuery = encodeURIComponent(
+  '*[_type == "images" && slug.current == "about-section"]'
+);
 const aboutImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${aboutImageQuery}`;
 const aboutImageTag = document.querySelector(
   ".about-section .contents .left .main-image img"
 );
 
-// ------------------------------------------------
+// ============================================================
 // Fetch Homepage About Section Image
+// ============================================================
 
+// ------------------------------------------------------------
 // Initial request to get the document
 
 fetch(aboutImageUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    result.forEach((img) => {
+      // get the image and the alt-text
+      const { alttext, image } = img;
+
+      // make a new request for the image id => "_ref"
+      // select the image id => "_ref"
+      let imgId = image.asset._ref;
+
+      // create a query for the image using the image id = "_ref"
+      let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+
+      // fetch the image itself & grab the url to the image
+      fetch(
+        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          const { url } = result.result[0];
+          aboutImageTag.setAttribute("src", url);
+          aboutImageTag.setAttribute("alt", alttext);
+        })
+        .catch((err) => console.error(err));
+    });
+  })
+  .catch((err) => console.error(err));
+
+// ============================================================
+// STUDENTS PAGE CONTENTS
+// ============================================================
+
+// ------------------------------------------------------------
+// Fetch Students Introduction Section Image
+
+const studenstIntroductionSectionImageQuery = encodeURIComponent(
+  '*[_type == "images" && slug.current == "introduction-section-from-students-page"]'
+);
+const studenstIntroductionSectionImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${studenstIntroductionSectionImageQuery}`;
+const studenstIntroductionSectionImageTag = document.querySelector(
+  ".introduction-section .introduction-section-content .introduction-section-media img"
+);
+
+fetch(studenstIntroductionSectionImageUrl)
   .then((res) => res.json())
   .then(({ result }) => {
     result.forEach((img) => {
@@ -217,40 +265,61 @@ fetch(aboutImageUrl)
   })
   .catch((err) => console.error(err));
 
-// ------------------------------------------------
-// Fetch Students Introduction Section Image
+// ============================================================
+// Fetch The Keypoints
+// ============================================================
 
-const studenstIntroductionSectionImageQuery = encodeURIComponent(
-  '*[_type == "images"]'
+const keyPointsContainer = document.querySelector(
+  ".keypoints-section-contents"
 );
-const studenstIntroductionSectionImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${studenstIntroductionSectionImageQuery}`;
-const studenstIntroductionSectionImageTag = document.querySelector(
-  ".introduction-section .introduction-section-content .introduction-section-media img"
-);
+const keyPointsQuery = encodeURIComponent('*[_type == "keypoint"]');
+const keyPointsUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${keyPointsQuery}`;
 
-fetch(studenstIntroductionSectionImageUrl)
+fetch(keyPointsUrl)
   .then((res) => res.json())
   .then(({ result }) => {
-    result.forEach((img) => {
-      // get the image and the alt-text
-      const { alttext, image } = img;
+    let keypointTag = document.createElement("div");
+    keypointTag.setAttribute("class", "keypoint");
 
-      // make a new request for the image id => "_ref"
-      // select the image id => "_ref"
-      let imgId = image.asset._ref;
+    result.forEach((keypoint) => {
+      // -------------------------------------------------------
+      // create an HTML tag for each keypoint and assign a class
 
-      // create a query for the image using the image id = "_ref"
-      let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+      let keypointTag = document.createElement("div");
+      keypointTag.setAttribute("class", "keypoint");
 
-      // fetch the image itself & grab the url to the image
-      fetch(
-        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
-      )
+      // -------------------------------------------------------
+      // get the { point, heading, & description } and the image
+
+      const { point, heading, description, image, slug } = keypoint;
+
+      // -------------------------------------------------------
+      // make a new request for the image.
+
+      const iconId = image.asset._ref;
+      const iconQuery = encodeURIComponent(`*[_id == "${iconId}"]`);
+      const iconUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${iconQuery}`;
+
+      fetch(iconUrl)
         .then((res) => res.json())
         .then((result) => {
           const { url } = result.result[0];
-          aboutImageTag.setAttribute("src", url);
-          aboutImageTag.setAttribute("alt", alttext);
+
+          keypointTag.innerHTML = `
+             <img
+                src="${url}"
+                alt="${slug.current}"
+              />
+              <div class="text">
+                <h5>${point}</h5>
+                <h3>${heading}</h3>
+                <p>
+                  ${description}
+                </p>
+              </div>
+          `;
+
+          keyPointsContainer.appendChild(keypointTag);
         })
         .catch((err) => console.error(err));
     });

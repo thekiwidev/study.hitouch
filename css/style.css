@@ -127,6 +127,11 @@ p {
   gap: 1rem;
   flex: 1;
 }
+#wrapper section.keypoints-section .keypoints-section-contents .keypoint img {
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 #wrapper section.keypoints-section .keypoints-section-contents .keypoint h5 {
   font-size: 0.7rem;
   font-weight: 300;
