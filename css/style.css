@@ -75,23 +75,23 @@ p {
     flex-direction: column-reverse;
   }
 }
-#wrapper section.introduction-section .introduction-section-content header.introduction-section-header {
+#wrapper section.introduction-section .introduction-section-content .texts {
   flex: 1;
 }
-#wrapper section.introduction-section .introduction-section-content header.introduction-section-header h1 {
+#wrapper section.introduction-section .introduction-section-content .texts header.introduction-section-header h1 {
   width: 75%;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.introduction-section .introduction-section-content header.introduction-section-header h1 {
+  #wrapper section.introduction-section .introduction-section-content .texts header.introduction-section-header h1 {
     width: 100%;
   }
 }
-#wrapper section.introduction-section .introduction-section-content header.introduction-section-header p {
+#wrapper section.introduction-section .introduction-section-content .texts header.introduction-section-header p {
   margin: 1.5rem 0;
   width: 70%;
 }
 @media only screen and (max-width: 850px) {
-  #wrapper section.introduction-section .introduction-section-content header.introduction-section-header p {
+  #wrapper section.introduction-section .introduction-section-content .texts header.introduction-section-header p {
     width: 100%;
   }
 }

@@ -15,6 +15,13 @@ const milestonesHeader = document.querySelector("header.milestones-header");
 const testimonialsHeader = document.querySelector("header.testimonials-header");
 const blogHeader = document.querySelector("header.blog-section-header");
 const contactHeader = document.querySelector("header.contact-section-header");
+const studentsWhyUsHeader = document.querySelector(".why-us-section-header");
+const studentsIntroductionHeader = document.querySelector(
+  ".introduction-section-header"
+);
+const studentsHowItWorksHeader = document.querySelector(
+  ".how-it-works-section-header"
+);
 
 const headersArray = [
   {
@@ -49,6 +56,18 @@ const headersArray = [
     headerTitle: contactHeader,
     headerSlug: "contact-section",
   },
+  {
+    headerTitle: studentsIntroductionHeader,
+    headerSlug: "introduction-section",
+  },
+  {
+    headerTitle: studentsWhyUsHeader,
+    headerSlug: "why-us-section",
+  },
+  {
+    headerTitle: studentsHowItWorksHeader,
+    headerSlug: "how-it-works-section",
+  },
 ];
 
 // funtion to fetch each header's content
@@ -70,7 +89,7 @@ const fetchHeader = (sectionHeader, sectionSlug) => {
       // append then with template strings to the sectionHeader
       sectionHeader.innerHTML = `
       <h1>${mainheading}</h1>
-      <p>${subheading}</p>
+     ${subheading ? `<p>${subheading}</p>` : ""}
       `;
     })
     .catch((err) => console.error(err));
