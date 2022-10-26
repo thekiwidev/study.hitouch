@@ -11,6 +11,7 @@ import banners from "./banners";
 import images from "./images";
 import studentsKeypoints from "./students.keypoints";
 import studentsFeatures from "./students.features";
+import studentsHowItWorks from "./students.howItWorks";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     images,
     studentsKeypoints,
     studentsFeatures,
+    studentsHowItWorks,
   ]),
 });

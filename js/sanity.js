@@ -265,6 +265,46 @@ fetch(studenstIntroductionSectionImageUrl)
   })
   .catch((err) => console.error(err));
 
+// ------------------------------------------------------------
+// Fetch Students Introduction Section Image
+
+const studenstWhyUsSectionImageQuery = encodeURIComponent(
+  '*[_type == "images" && slug.current == "why-us-section-from-student-page"]'
+);
+const studenstWhyUsSectionImageUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${studenstWhyUsSectionImageQuery}`;
+const studenstWhyUsSectionImageTag = document.querySelector(
+  ".why-us-section .why-us-section-media img"
+);
+
+fetch(studenstWhyUsSectionImageUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    result.forEach((img) => {
+      // get the image and the alt-text
+      const { alttext, image } = img;
+
+      // make a new request for the image id => "_ref"
+      // select the image id => "_ref"
+      let imgId = image.asset._ref;
+
+      // create a query for the image using the image id = "_ref"
+      let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+
+      // fetch the image itself & grab the url to the image
+      fetch(
+        `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          const { url } = result.result[0];
+          studenstWhyUsSectionImageTag.setAttribute("src", url);
+          studenstWhyUsSectionImageTag.setAttribute("alt", alttext);
+        })
+        .catch((err) => console.error(err));
+    });
+  })
+  .catch((err) => console.error(err));
+
 // ============================================================
 // Fetch The Keypoints
 // ============================================================
@@ -375,3 +415,55 @@ fetch(featuresUrl)
     });
   })
   .catch((err) => console.error(err));
+
+// ============================================================
+// Fetch The Keypoints
+// ============================================================
+
+const stepsContainer = document.querySelector(
+  ".how-it-works-section .how-it-works-section-content .steps"
+);
+
+const stepsTags = document.querySelectorAll(".step");
+const stepsQuery = encodeURIComponent(`*[_type == "steps"]`);
+const stepsUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${stepsQuery}`;
+
+stepsTags.forEach((stepTag) => {
+  fetch(stepsUrl)
+    .then((res) => res.json())
+    .then(({ result }) => {
+      result.find((currentStep) => {
+        // -------------------------------------------------------
+        // get the { point, heading, & description } and the image
+
+        const { step, heading, description, image, slug } = currentStep;
+
+        // -------------------------------------------------------
+        // make a new request for the image.
+
+        const imgId = image.asset._ref;
+        const imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+        const imgUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`;
+
+        fetch(imgUrl)
+          .then((res) => res.json())
+          .then(({ result }) => {
+            const { url } = result[0];
+
+            // ----------------------------------------------
+            // inject the HTML if the slug matches the class
+
+            if (stepTag.classList.contains(slug.current)) {
+              stepTag.innerHTML = `
+                <img src="${url}" alt="${slug.current}" />
+                <h5>${step}</h5>
+                <h4>${heading}</h4>
+                <p>${description}</p>
+              `;
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    })
+    .catch((err) => console.error(err));
+});
