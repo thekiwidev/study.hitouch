@@ -417,7 +417,7 @@ fetch(featuresUrl)
   .catch((err) => console.error(err));
 
 // ============================================================
-// Fetch The Keypoints
+// Fetch The Steps
 // ============================================================
 
 const stepsContainer = document.querySelector(
@@ -467,3 +467,34 @@ stepsTags.forEach((stepTag) => {
     })
     .catch((err) => console.error(err));
 });
+
+// ============================================================
+// Fetch Call to Action Banner
+// ============================================================
+
+const callToActionBannerTag = document.querySelector(
+  ".call-to-action-banner-content"
+);
+
+const ctaBannerQuery = encodeURIComponent(`*[_type == "ctabanner"]`);
+const ctaBannerUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${ctaBannerQuery}`;
+
+fetch(ctaBannerUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const { bigheading, smallheading, btntext, slug } = result[0];
+
+    callToActionBannerTag.innerHTML = `
+    <div class="text">
+      <h5>${smallheading}</h5>
+      <h3>
+        ${bigheading}
+      </h3>
+    </div>
+    <div class="cta">
+      <a href="#form" class="btn btn-primary btn-primary-inerted"
+        >${btntext}</a>
+    </div>
+    `;
+  })
+  .catch((err) => console.error(err));
