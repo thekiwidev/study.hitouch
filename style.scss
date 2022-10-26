@@ -528,8 +528,10 @@
           }
 
           p {
-            width: 60%;
+            width: 80%;
             margin: 2rem 0;
+
+            text-align: justify;
 
             @media only screen and (max-width: 851px) {
               width: 100%;

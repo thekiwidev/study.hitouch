@@ -681,8 +681,9 @@ p {
   color: #00afef;
 }
 #wrapper section.about-section .contents .right header.about-section-header p {
-  width: 60%;
+  width: 80%;
   margin: 2rem 0;
+  text-align: justify;
 }
 @media only screen and (max-width: 851px) {
   #wrapper section.about-section .contents .right header.about-section-header p {

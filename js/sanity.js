@@ -1,9 +1,9 @@
 const PROJECT_ID = "kstbebtk";
 const DATASET = "production";
 
-// -------------------------------------------------------
+// =========================================================
 // Fetch Headers
-// -------------------------------------------------------
+// =========================================================
 
 // get all header tags
 
@@ -91,7 +91,7 @@ const fetchHeader = (sectionHeader, sectionSlug) => {
       // append then with template strings to the sectionHeader
       sectionHeader.innerHTML = `
       <h1>${mainheading}</h1>
-     ${subheading ? `<p>${subheading}</p>` : ""}
+     ${!subheading ? "" : `<p>${subheading}</p>`}
       `;
     })
     .catch((err) => console.error(err));
@@ -498,3 +498,44 @@ fetch(ctaBannerUrl)
     `;
   })
   .catch((err) => console.error(err));
+
+// =========================================================
+// FETCH THE BANNERS
+// =========================================================
+
+const homepageBanner = document.querySelector("section.homepage-banner");
+const studentsBanner = document.querySelector("section.students-banner");
+
+const bannersArray = [
+  {
+    bannerTitle: homepageBanner,
+    bannerSlug: "homepage-banner",
+  },
+  {
+    bannerTitle: studentsBanner,
+    bannerSlug: "students-banner",
+  },
+];
+
+const fetchBanner = (bannerTitle, bannerSlug) => {
+  const bannerQuery = encodeURIComponent(
+    `*[_type == "banner" && slug.current == "${bannerSlug}"]`
+  );
+  const bannerUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${bannerQuery}`;
+
+  fetch(bannerUrl)
+    .then((res) => res.json())
+    .then(({ result }) => {
+      const { headingtext, primarybtn, slug } = result[0];
+      const bannerContent = bannerTitle.querySelector(
+        ".heading-text .main-heading"
+      );
+
+      bannerContent.innerHTML = `<h1>${headingtext}</h1>`;
+    });
+};
+
+bannersArray.forEach((banner) => {
+  console.log(banner);
+  fetchBanner(banner.bannerTitle, banner.bannerSlug);
+});
