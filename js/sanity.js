@@ -185,6 +185,59 @@ const aboutImageTag = document.querySelector(
   ".about-section .contents .left .main-image img"
 );
 
+// =========================================================
+// FETCH ABOUT
+// =========================================================
+
+const aboutContent = document.querySelector(".about-section .contents");
+const aboutContentQuery = encodeURIComponent('*[_type == "about"]');
+const aboutContentUrl = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${aboutContentQuery}`;
+
+fetch(aboutContentUrl)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const { icon, heading, para1, para2, btntext } = result[0];
+
+    // make a new request for the image id => "_ref"
+    // select the image id => "_ref"
+    let imgId = icon.asset._ref;
+
+    // create a query for the image using the image id = "_ref"
+    let imgQuery = encodeURIComponent(`*[_id == "${imgId}"]`);
+
+    // fetch the image itself & grab the url to the image
+    fetch(
+      `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${imgQuery}`
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        const { url } = result.result[0];
+
+        aboutContent.innerHTML = `
+        <div class="left">
+          <div class="main-image">
+            <img src="${url}" alt="" />
+            <p class="ratings"><b>8,200+</b> five star reviews</p>
+          </div>
+          <div class="join-now">
+            <img src="./assets/images/join1.png" alt="" />
+            <p>Join over <b>4,000+</b> clients</p>
+          </div>
+        </div>
+        <div class="right">
+          <header class="about-section-header">
+            <h1>${heading}</h1>
+            <p>${para1}</p>
+            <p>${para2}</p>
+          </header>
+          <button class="btn btn-secondary">${btntext}</button>
+        </div>
+        `;
+      })
+      .catch((err) => console.error(err));
+  })
+  .catch((err) => console.log(err));
+
 // ============================================================
 // Fetch Homepage About Section Image
 // ============================================================
@@ -536,6 +589,5 @@ const fetchBanner = (bannerTitle, bannerSlug) => {
 };
 
 bannersArray.forEach((banner) => {
-  console.log(banner);
   fetchBanner(banner.bannerTitle, banner.bannerSlug);
 });

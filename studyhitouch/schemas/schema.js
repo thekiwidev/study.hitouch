@@ -13,6 +13,7 @@ import studentsKeypoints from "./students.keypoints";
 import studentsFeatures from "./students.features";
 import studentsHowItWorks from "./students.howItWorks";
 import studentsCtaBanner from "./students.ctaBanner";
+import about from "./about";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +34,6 @@ export default createSchema({
     studentsFeatures,
     studentsHowItWorks,
     studentsCtaBanner,
+    about,
   ]),
 });
