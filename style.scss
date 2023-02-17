@@ -123,20 +123,36 @@
 
       a.logo {
         cursor: pointer;
-        flex: 1;
+        flex: 2;
         padding: 0.5rem;
 
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        background-image: url("../assets/logo-white.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 50% 50%;
-        width: 220px;
-        height: 55px;
+        gap: 0.5rem;
+
+        svg {
+          width: 42px;
+          object-fit: contain;
+        }
+
+        span {
+          font-weight: 900;
+          color: #fff;
+        }
 
         &.active {
-          background-image: url("../assets/logo-black.png");
+          svg {
+            fill: $theme-black;
+
+            path {
+              fill: $theme-black;
+            }
+          }
+          span {
+            color: $theme-black;
+          }
         }
       }
 
@@ -636,6 +652,11 @@
               flex: 2.3;
 
               color: #fff;
+
+              b {
+                color: #fff;
+              }
+
               a.btn:hover {
                 background: #fff;
                 color: #000;
@@ -1301,19 +1322,43 @@
 
           .logo {
             a.logo {
-              display: block;
               cursor: pointer;
+              flex: 2;
+              padding: 0.5rem;
 
-              background-image: url("../assets/logo-black.png");
-              background-repeat: no-repeat;
-              background-size: contain;
-              background-position: 50% 50%;
-              width: 220px;
-              height: 55px;
+              display: flex;
+              align-items: center;
+              // justify-content: center;
+
+              gap: 0.5rem;
+
+              svg {
+                width: 42px;
+                object-fit: contain;
+              }
+
+              span {
+                font-weight: 900;
+                color: #fff;
+              }
+
+              &.active {
+                svg {
+                  fill: $theme-black;
+
+                  path {
+                    fill: $theme-black;
+                  }
+                }
+                span {
+                  color: $theme-black;
+                }
+              }
             }
           }
 
-          p {
+          p,
+          b {
             margin: 1.4rem 0;
             color: #fff;
           }

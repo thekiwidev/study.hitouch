@@ -271,7 +271,6 @@ p {
 #wrapper .how-it-works-section .how-it-works-section-content .btn {
   display: block;
   margin: 3rem auto;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -343,16 +342,7 @@ p {
 #wrapper header.main-header.active {
   position: fixed;
   background: #fff;
-  -webkit-animation: fix 0.3s ease-in-out;
-          animation: fix 0.3s ease-in-out;
-}
-@-webkit-keyframes fix {
-  from {
-    top: -90px;
-  }
-  to {
-    top: 0;
-  }
+  animation: fix 0.3s ease-in-out;
 }
 @keyframes fix {
   from {
@@ -378,18 +368,30 @@ p {
 }
 #wrapper header.main-header .container a.logo {
   cursor: pointer;
-  flex: 1;
+  flex: 2;
   padding: 0.5rem;
-  display: block;
-  background-image: url("../assets/logo-white.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-  width: 220px;
-  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-#wrapper header.main-header .container a.logo.active {
-  background-image: url("../assets/logo-black.png");
+#wrapper header.main-header .container a.logo svg {
+  width: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrapper header.main-header .container a.logo span {
+  font-weight: 900;
+  color: #fff;
+}
+#wrapper header.main-header .container a.logo.active svg {
+  fill: #373435;
+}
+#wrapper header.main-header .container a.logo.active svg path {
+  fill: #373435;
+}
+#wrapper header.main-header .container a.logo.active span {
+  color: #373435;
 }
 #wrapper header.main-header .container nav.navbar {
   flex: 9;
@@ -769,6 +771,9 @@ p {
   flex: 2.3;
   color: #fff;
 }
+#wrapper section.platforms-section .container #platform-slider .glide__slide .contents .texts b {
+  color: #fff;
+}
 #wrapper section.platforms-section .container #platform-slider .glide__slide .contents .texts a.btn:hover {
   background: #fff;
   color: #000;
@@ -1126,7 +1131,6 @@ p {
 #wrapper section.blog-section .btn {
   display: block;
   margin: 3rem 0 0 0;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -1283,16 +1287,33 @@ p {
   flex: 1.1;
 }
 #wrapper footer.main-footer .container .footer-top .company .logo a.logo {
-  display: block;
   cursor: pointer;
-  background-image: url("../assets/logo-black.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-  width: 220px;
-  height: 55px;
+  flex: 2;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-#wrapper footer.main-footer .container .footer-top .company p {
+#wrapper footer.main-footer .container .footer-top .company .logo a.logo svg {
+  width: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrapper footer.main-footer .container .footer-top .company .logo a.logo span {
+  font-weight: 900;
+  color: #fff;
+}
+#wrapper footer.main-footer .container .footer-top .company .logo a.logo.active svg {
+  fill: #373435;
+}
+#wrapper footer.main-footer .container .footer-top .company .logo a.logo.active svg path {
+  fill: #373435;
+}
+#wrapper footer.main-footer .container .footer-top .company .logo a.logo.active span {
+  color: #373435;
+}
+#wrapper footer.main-footer .container .footer-top .company p,
+#wrapper footer.main-footer .container .footer-top .company b {
   margin: 1.4rem 0;
   color: #fff;
 }
